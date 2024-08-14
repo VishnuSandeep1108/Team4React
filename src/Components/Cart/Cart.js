@@ -12,6 +12,7 @@ function Cart() {
     const[cart,setCart]=useState(null);
     const [totalPrice, setTotalPrice] = useState(0);
     const [Coupon,setCoupon]=useState("")
+    const{userID,setUserID}=useState("547a")
     let cartTax=0;
     let cartTotal=0;
     const [discount,setdiscount]=useState(0)
@@ -68,7 +69,7 @@ function Cart() {
 
         setCurrentUser(temp);
         setCart(temp.cart);
-        axios.put(`http://localhost:9000/users/547a`,temp).then(()=>{
+        axios.put(`http://localhost:9000/users/id=${userID}`,temp).then(()=>{
             console.log("Updated!");      
         })
         applyCode(totalPrice);
@@ -87,7 +88,7 @@ function Cart() {
 
         setCurrentUser(temp);
         setCart(temp.cart);
-        axios.put(`http://localhost:9000/users/547a`,temp).then(()=>{
+        axios.put(`http://localhost:9000/users/id=${userID}`,temp).then(()=>{
             console.log("Updated!");      
         })
         applyCode(totalPrice);
@@ -104,7 +105,7 @@ function Cart() {
             }
             setCurrentUser(temp)
             setCart(temp.cart)
-            axios.put(`http://localhost:9000/users/547a`,temp).then(()=>{
+            axios.put(`http://localhost:9000/users/id=${userID}`,temp).then(()=>{
                 console.log("Updated!");      
             })
         })
