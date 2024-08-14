@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    overflow-x: hidden;
+}
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;  */
+}
+.project { 
+    /* display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px; */
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px;
+} 
+.left-bar{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+}
+.empty-cart{
+    height: 400px;
+    margin: 10px 10px;
+    width: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+}
+
+.empty-cart > img{
+    transform: scale(0.5);
+}
+
+.shop {
+    /* display: grid;
+    gap: 10px;  */
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    width: 500px ;
+    
+}
+.box {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    height: 250px;
+    padding: 10px;
+    background: rgb(234, 234, 234);
+    border-radius: 8px;
+    transition: all 0.7s ease;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0; */
+    align-items: center;
+}
+.box:hover {
+    transform: scale(1.02); 
+} 
+.box img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover; 
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} 
+.content h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.content .actual-price {
+    margin-bottom: 10px;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.content .content .discount{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.btn-area {
+    cursor: pointer; 
+    background-color: gray;/*#76bfb6*/
+    color: #fff;
+    padding: 10px;
+    border-radius: 9px;
+    font-weight: 100;
+    transition: color 0.3s ease;
+}
+.btn-area:hover {
+    background-color: black;
+}
+.btn-area i {
+    margin-right: 5px;
+}
+.unit input {
+    width: 50px;
+    padding: 8px;
+    text-align: center;
+}
+.right-bar {
+    padding: 20px;
+    width: 300px;
+    height: auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+}
+
+.quantityBtn:hover{
+    cursor: pointer;
+}
+
+.right-bar p {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.right-bar a {
+    background-color: gray;/* #76bfb6*/
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.right-bar a:hover {
+    background: black;/* #397ca7;*/
+}
+@media screen and (max-width: 900px) {
+    .project {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .right-bar {
+        margin: 20px auto 0;
+    }
+    .right-bar > h3{
+        margin: 10px;
+    }
+    .btn-area {
+        display: none;
+    }
+    
+
+    .content .actual-price{
+        display: none;
+    }
+}
+@media screen and (max-width: 700px) {
+    .box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .box img {
+        margin: 0 auto;
+        width: 100px;
+        height: 100px;
+    }
+    .content h3 {
+        margin-bottom: 5px;
+    }
+    .content.actual-price {
+        margin-bottom: 5px;
+    }
+    .btn-area {
+        display: center;
+    }
+}
+
+/* Media Queries */
+
+@media (max-width: 767px) {
+.navbar-brand{
+margin: 0 auto;
+}
+
+.navbar-toggler{
+margin: 0 auto;
+}
+}
+
+@media (max-width: 768px) {
+footer {
+grid-template-columns: 1fr;
+text-align: center;
+}
+
+.footer-right {
+grid-template-columns: 1fr;
+}
+
+.footer-right > ul {
+padding: 0;
+}
+
+.footer-left, .footer-center, .footer-right {
+padding: 20px;
+}
+}
