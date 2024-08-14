@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+    color: white;
+    padding: 10px 10px;
+}
+
+h3 {
+    font-family: "Cinzel Decorative";
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.pad {
+    padding: 35px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    margin: 10px 10px;
+    height: 100px;
+    width: 250px;
+    border: solid black;
+    font-weight: bold;
+    transition: all 0.5s linear;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
