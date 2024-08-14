@@ -1,0 +1,163 @@
+
+/* WISHLIST CSS */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+}
+
+.box,.box2 {
+
+    padding: 10px;
+    background-color: rgb(234, 234, 234);
+    ;
+    margin:10px;
+    /*width:40%; */
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button1 {
+    cursor: pointer;
+    color: #fff;
+    background-color: gray;
+    border-radius: 9px;
+    padding: 10px;
+    font-weight: 100;
+    transition: color 0.3s ease;
+    width: 80%;
+}
+
+.button2 {
+    cursor: pointer;
+    color: #fff;
+    background-color: gray;
+    border-radius: 9px;
+    padding: 10px;
+    font-weight: 100;
+
+    width: 80%;
+}
+
+h1{
+  margin: 50px auto;
+  font-weight: bold;
+  font-family: "Cinzel Decorative";
+  font-size: 350%;
+  padding: 5px;
+}   
+    
+    
+    /* CSS */
+    .button-85 {
+      padding: 0.6em 2em;
+      border: none;
+      outline: none;
+      color: rgb(255, 255, 255);
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      margin:5px;
+    }
+    
+    .button-85:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing-button-85 20s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+    
+    @keyframes glowing-button-85 {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+    
+    .button-85:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #222;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+
+
+.box h3 {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 130%;
+}
+
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
