@@ -6,7 +6,7 @@ import "./Card.css";
 function Card({ totalAmount }) {
     const form = useForm({ mode: "all" });
     const navigate = useNavigate();
-    const { register, control, handleSubmit, formState } = form;
+    const { register, handleSubmit, formState } = form;
     const { errors } = formState;
 
     const [name, setName] = useState();
