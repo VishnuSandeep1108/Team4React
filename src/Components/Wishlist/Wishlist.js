@@ -13,7 +13,7 @@ function Wishlist() {
     const [searche,hhh]=useState('')
     useEffect(
         ()=>{
-            axios.get(`http://localhost:9000/users?username=${username}`).then((user)=>{
+            axios.get(`http://localhost:8000/users?username=${username}`).then((user)=>{
                 console.log("DATA: ",user.data);
                 console.log("DATA[0]: ",user.data[0]);
                 
@@ -38,7 +38,7 @@ function Wishlist() {
             data[0].cart.push(j)
         }
         setData([...data])
-        axios.put(`http://localhost:9000/users/${userid}`,data[0]).then(()=>{console.log('added to cart')})
+        axios.put(`http://localhost:8000/users/${userid}`,data[0]).then(()=>{console.log('added to cart')})
         alert('Added to Cart')
     }
 
@@ -46,7 +46,7 @@ function Wishlist() {
         const f=data[0].wishlist
         data[0].wishlist.splice(f.indexOf(j),1)
         setData([...data])
-        axios.put(`http://localhost:9000/users?id=${userid}`,data[0]).then(()=>{console.log('removed from wishlist')})
+        axios.put(`http://localhost:8000/users/${userid}`,data[0]).then(()=>{console.log('removed from wishlist')})
         alert('deleted from wishlist')
     }
     const categoryy=(val)=>{
@@ -81,12 +81,12 @@ if(i.wishlist.length===0){
 }
 else{
 return (
-<div style={{display:'flex'}}>
+<div>
      {i.wishlist.map((wishlistItem)=>{
      if((wishlistItem.tags[0]===searche || wishlistItem.category===searche)){ return (
         <div className='box'>
             <img src={wishlistItem.images[0]}></img>
-            <h2>{wishlistItem.title}</h2>
+            <h3>{wishlistItem.title}</h3>
             <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
             <h4>$ {wishlistItem.price}</h4>
             <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
@@ -97,7 +97,7 @@ return (
     if((wishlistItem.category==='mens-shoes' && category==='mens-shoes')){ return (
         <div className='box'>
             <img src={wishlistItem.images[0]}></img>
-            <h2>{wishlistItem.title}</h2>
+            <h3>{wishlistItem.title}</h3>
             <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
             <h4>$ {wishlistItem.price}</h4>
             <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
@@ -110,7 +110,7 @@ return (
         return (
             <div className='box'>
                 <img src={wishlistItem.images[0]}></img>
-                <h2>{wishlistItem.title}</h2>
+                <h3>{wishlistItem.title}</h3>
                 <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
                 <h4>$ {wishlistItem.price}</h4>
                 <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
@@ -123,7 +123,7 @@ return (
         return (
             <div className='box'>
                 <img src={wishlistItem.images[0]}></img>
-                <h2>{wishlistItem.title}</h2>
+                <h3>{wishlistItem.title}</h3>
                 <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
                 <h4>$ {wishlistItem.price}</h4>
                 <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
@@ -137,7 +137,7 @@ return (
         return (
             <div className='box'>
                 <img src={wishlistItem.images[0]}></img>
-                <h2>{wishlistItem.title}</h2>
+                <h3>{wishlistItem.title}</h3>
                 <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
                 <h4>$ {wishlistItem.price}</h4>
                 <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
@@ -152,7 +152,7 @@ return (
     return (
         <div className='box'>
             <img src={wishlistItem.images[0]}></img>
-            <h2>{wishlistItem.title}</h2>
+            <h3>{wishlistItem.title}</h3>
             <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
             <h4>$ {wishlistItem.price}</h4>
             <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>

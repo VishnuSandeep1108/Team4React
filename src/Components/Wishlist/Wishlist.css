@@ -1,6 +1,7 @@
 
 /* WISHLIST CSS */
-.wrapper {
+/*
+ .wrapper {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -17,7 +18,6 @@
     background-color: rgb(234, 234, 234);
     ;
     margin:10px;
-    /*width:40%; */
     text-align: center;
     border-radius: 20px;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -54,7 +54,6 @@ h1{
 }   
     
     
-    /* CSS */
     .button-85 {
       padding: 0.6em 2em;
       border: none;
@@ -159,5 +158,159 @@ img:hover {
     .wrapper {
         grid-template-columns: 1fr;
     }
+} */
+
+/* WISHLIST CSS */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px;
 }
 
+.box, .box2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+   /* background-color: rgb(234, 234, 234); */
+  margin: 10px;
+  text-align: left;
+  border-radius: 5px;
+  /* box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  border-bottom: 5px solid gray; /* Add gray line */
+}
+
+.box img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.box img:hover {
+  transform: scale(1.1);
+}
+
+.box h3 {
+  color: black;
+  margin: 0 10px;
+  font-size: 120%;
+}
+
+.box .price, .box .stock-status, .box .add-to-cart {
+  margin: 0 10px;
+}
+
+.button1, .button2, .button-85 {
+  cursor: pointer;
+  color:black;
+  /* background-color: gray; */
+  border: none;
+  padding: 10px;
+  font-weight: 200px;
+  transition: color 0.3s ease;
+  width: auto;
+  background:none;
+}
+
+h1 {
+  margin: 20px auto;
+  font-weight: bold;
+  font-family: "Cinzel Decorative";
+  font-size: 350%;
+  padding: 5px;
+}
+
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 5px;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+      background-position: 0 0;
+  }
+  50% {
+      background-position: 400% 0;
+  }
+  100% {
+      background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .box, .box2 {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .box, .box2 {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box, .box2 {
+      flex-direction: column;
+      align-items: center;
+  }
+}
