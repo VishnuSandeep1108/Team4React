@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Wishlist.css'
-import h from './giphy.gif'
+import h from './empty-wishlist.png'
 import axios from 'axios'
 import { Dropdown } from 'bootstrap'
 function Wishlist() {
@@ -61,8 +61,18 @@ function Wishlist() {
 //     </div>
 <>
 <h1>WISHLIST</h1>
-<input type='text' onChange={search}></input><button className='button-85' onClick={()=>categoryy('mens-shirts')}>Mens Clothing</button> <button className='button-85' onClick={()=>categoryy('womens-dresses')}>Womens Clothing</button>    <button className='button-85' onClick={()=>categoryy('mens-shoes')}>Mens Footwear</button> <button className='button-85' onClick={()=>categoryy('womens-shoes')}>Womens Footwear</button><button className='button-85' onClick={()=>categoryy('anything')}>All Categories</button>
-  {/* <button onClick={sortwishlist}>Sort based on price</button> */}
+<a className='top-sellers-categories' onClick={()=>categoryy('mens-shirts')}><span className='top-border'></span>
+              <span>Mens clothing</span>
+              <span className='bottom-border'></span></a> <a className='top-sellers-categories' onClick={()=>categoryy('womens-dresses')}><span className='top-border'></span>
+              <span>Womens Clothing</span>
+              <span className='bottom-border'></span></a> <a className='top-sellers-categories' onClick={()=>categoryy('mens-shoes')}> <span className='top-border'></span>
+              <span>Mens Footwear</span>
+              <span className='bottom-border'></span> </a> <a className='top-sellers-categories' onClick={()=>categoryy('womens-shoes')}> <span className='top-border'></span>
+              <span>Womens Footwear</span>
+              <span className='bottom-border'></span> </a> <a className='top-sellers-categories' onClick={()=>categoryy('anything')}> <span className='top-border'></span>
+              <span>All Categories</span>
+              <span className='bottom-border'></span> </a>  <input type='text' className='styled-input' onChange={search}></input>
+             
   {/* {n.map((i)=>{console.log(i)})} */}
 <div className='wrapper'>
 {/* {data.map((i)=>{return <div>{i.wishlist.map((j)=>{return <div className='box'><img src={j.images[0]}></img><h3>{j.title}</h3><h5>{j.price}</h5><button className='button button1' onClick={()=>cartadd(j)}>Add to Cart</button><button className='button button2'>Delete</button></div>})} 
@@ -76,7 +86,7 @@ function Wishlist() {
 
 if(i.wishlist.length===0){
     return(
-        <img src={h} style={{width:'1300px',height:'500px'}} alt='hello'></img>
+        <img src={h} style={{width:'1000px',height:'400px',margin:'auto'}} alt='hello'></img>
     )
 }
 else{
@@ -85,23 +95,31 @@ return (
      {i.wishlist.map((wishlistItem)=>{
      if((wishlistItem.tags[0]===searche || wishlistItem.category===searche)){ return (
         <div className='box'>
+             <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i className='fa fa-close' style={{fontSize:'24px'}}></i></button>
             <img src={wishlistItem.images[0]}></img>
+            <div>
             <h3>{wishlistItem.title}</h3>
-            <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
+            <i class="fa-solid fa-copyright" style={{marginLeft:'130px'}}></i> {wishlistItem.brand}
+            </div>
+            <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating}  </h3>
             <h4>$ {wishlistItem.price}</h4>
             <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-            <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button>
+            {/* <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}>X</button> */}
             {/* <img src='https://assets.dummyjson.com/public/qr-code.png'/> */}
         </div>
     )}
     if((wishlistItem.category==='mens-shoes' && category==='mens-shoes')){ return (
         <div className='box'>
+              <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i className='fa fa-close' style={{fontSize:'24px'}}></i></button>
             <img src={wishlistItem.images[0]}></img>
+            <div>
             <h3>{wishlistItem.title}</h3>
-            <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
+            <i class="fa-solid fa-copyright" style={{marginLeft:'130px'}}></i> {wishlistItem.brand}
+            </div>
+            <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} </h3>
             <h4>$ {wishlistItem.price}</h4>
             <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-            <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button>
+            {/* <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button> */}
             {/* <img src='https://assets.dummyjson.com/public/qr-code.png'/> */}
         </div>
     )}
@@ -109,12 +127,16 @@ return (
     else if(wishlistItem.category==='womens-shoes' && category==='womens-shoes'){
         return (
             <div className='box'>
+                  <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i className='fa fa-close' style={{fontSize:'24px'}}></i></button>
                 <img src={wishlistItem.images[0]}></img>
-                <h3>{wishlistItem.title}</h3>
-                <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
+                <div>
+            <h3>{wishlistItem.title}</h3>
+            <i class="fa-solid fa-copyright" style={{marginLeft:'130px'}}></i> {wishlistItem.brand}
+            </div>
+                <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating}</h3>
                 <h4>$ {wishlistItem.price}</h4>
                 <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-                <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button>
+                {/* <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button> */}
                 {/* <img src='https://assets.dummyjson.com/public/qr-code.png'/> */}
             </div>
      )}
@@ -122,12 +144,16 @@ return (
      else if(wishlistItem.category==='mens-shirts' && category==='mens-shirts'){
         return (
             <div className='box'>
+                    <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i className='fa fa-close' style={{fontSize:'24px'}}></i></button>
                 <img src={wishlistItem.images[0]}></img>
-                <h3>{wishlistItem.title}</h3>
-                <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
+                <div>
+            <h3>{wishlistItem.title}</h3>
+            <i class="fa-solid fa-copyright" style={{marginLeft:'130px'}}></i> {wishlistItem.brand}
+            </div>
+                <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating}</h3>
                 <h4>$ {wishlistItem.price}</h4>
                 <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-                <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button>
+                {/* <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button> */}
                 {/* <img src='https://assets.dummyjson.com/public/qr-code.png'/> */}
             </div>
      )}
@@ -136,12 +162,16 @@ return (
      else if(wishlistItem.category==='womens-dresses' && category==='womens-dresses'){
         return (
             <div className='box'>
+                    <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i className='fa fa-close' style={{fontSize:'24px'}}></i></button>
                 <img src={wishlistItem.images[0]}></img>
-                <h3>{wishlistItem.title}</h3>
-                <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
+                <div>
+            <h3>{wishlistItem.title}</h3>
+            <i class="fa-solid fa-copyright" style={{marginLeft:'130px'}}></i> {wishlistItem.brand}
+            </div>
+                <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating}</h3>
                 <h4>$ {wishlistItem.price}</h4>
                 <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-                <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button>
+                {/* <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button> */}
                 {/* <img src='https://assets.dummyjson.com/public/qr-code.png'/> */}
             </div>
      )}
@@ -151,12 +181,16 @@ return (
     else if(category==='anything'){
     return (
         <div className='box'>
+                <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i className='fa fa-close' style={{fontSize:'24px'}}></i></button>
             <img src={wishlistItem.images[0]}></img>
+            <div>
             <h3>{wishlistItem.title}</h3>
-            <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating} <i class="fa-solid fa-copyright"></i> {wishlistItem.brand}   <i class="fa-solid fa-code"></i> {wishlistItem.sku}</h3>
+            <i class="fa-solid fa-copyright" style={{marginLeft:'130px'}}></i> {wishlistItem.brand}
+            </div>
+            <h3><i class="fa-solid fa-star"> </i>{wishlistItem.rating}</h3>
             <h4>$ {wishlistItem.price}</h4>
             <button className='button button1' onClick={()=>cartadd(wishlistItem)}><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
-            <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button>
+            {/* <button className='button button2' onClick={()=>wishlistdelete(wishlistItem)}><i class="fa-solid fa-heart"></i> Delete from Wishlist</button> */}
             {/* <img src='https://assets.dummyjson.com/public/qr-code.png'/> */}
         </div>
     )

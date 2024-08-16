@@ -4,136 +4,70 @@
       "id": "aacd",
       "username": "John",
       "password": "j",
-      "wishlist": [
-        {
-          "id": "83",
-          "title": "Blue & Black Check Shirt",
-          "description": "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
-          "category": "mens-shirts",
-          "price": 29.99,
-          "discountPercentage": 1.41,
-          "rating": 4.19,
-          "stock": 44,
-          "itemCount": 1,
-          "tags": [
-            "clothing",
-            "men's shirts"
-          ],
-          "brand": "Fashion Trends",
-          "sku": "6RJDTVCU",
-          "weight": 6,
-          "dimensions": {
-            "width": 17.25,
-            "height": 27.31,
-            "depth": 20.88
-          },
-          "warrantyInformation": "No warranty",
-          "shippingInformation": "Ships in 1 month",
-          "availabilityStatus": "In Stock",
-          "reviews": [
-            {
-              "rating": 4,
-              "comment": "Highly recommended!",
-              "date": "2024-05-23T08:56:21.623Z",
-              "reviewerName": "Mason Parker",
-              "reviewerEmail": "mason.parker@x.dummyjson.com"
-            },
-            {
-              "rating": 5,
-              "comment": "Highly impressed!",
-              "date": "2024-05-23T08:56:21.623Z",
-              "reviewerName": "Avery Perez",
-              "reviewerEmail": "avery.perez@x.dummyjson.com"
-            },
-            {
-              "rating": 5,
-              "comment": "Fast shipping!",
-              "date": "2024-05-23T08:56:21.623Z",
-              "reviewerName": "Nathan Reed",
-              "reviewerEmail": "nathan.reed@x.dummyjson.com"
-            }
-          ],
-          "returnPolicy": "7 days return policy",
-          "minimumOrderQuantity": 4,
-          "meta": {
-            "createdAt": "2024-05-23T08:56:21.623Z",
-            "updatedAt": "2024-05-23T08:56:21.623Z",
-            "barcode": "8840720880947",
-            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
-          },
-          "images": [
-            "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/1.png",
-            "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/2.png",
-            "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/3.png",
-            "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/4.png"
-          ],
-          "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/thumbnail.png"
+      "wishlist": [ {
+        "id": "88",
+        "title": "Nike Air Jordan 1 Red And Black",
+        "description": "The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes.",
+        "category": "mens-shoes",
+        "price": 149.99,
+        "discountPercentage": 15.82,
+        "rating": 2.77,
+        "stock": 15,
+        "itemCount": 9,
+        "tags": [
+          "footwear",
+          "athletic shoes"
+        ],
+        "brand": "Nike",
+        "sku": "84YC5J67",
+        "weight": 5,
+        "dimensions": {
+          "width": 19.29,
+          "height": 13.2,
+          "depth": 29.13
         },
-        {
-          "id": "185",
-          "title": "Black & Brown Slipper",
-          "description": "The Black & Brown Slipper is a comfortable and stylish choice for casual wear. Featuring a blend of black and brown colors, it adds a touch of sophistication to your relaxation.",
-          "category": "womens-shoes",
-          "price": 19.99,
-          "discountPercentage": 13.62,
-          "rating": 4.13,
-          "stock": 80,
-          "itemCount": 1,
-          "tags": [
-            "footwear",
-            "slippers"
-          ],
-          "brand": "Comfort Trends",
-          "sku": "0EVS1LOK",
-          "weight": 9,
-          "dimensions": {
-            "width": 9.73,
-            "height": 15.4,
-            "depth": 6.3
+        "warrantyInformation": "1 year warranty",
+        "shippingInformation": "Ships in 1 month",
+        "availabilityStatus": "In Stock",
+        "reviews": [
+          {
+            "rating": 2,
+            "comment": "Very unhappy with my purchase!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Victoria McDonald",
+            "reviewerEmail": "victoria.mcdonald@x.dummyjson.com"
           },
-          "warrantyInformation": "2 year warranty",
-          "shippingInformation": "Ships in 1-2 business days",
-          "availabilityStatus": "In Stock",
-          "reviews": [
-            {
-              "rating": 1,
-              "comment": "Not as described!",
-              "date": "2024-05-23T08:56:21.627Z",
-              "reviewerName": "Ethan Fletcher",
-              "reviewerEmail": "ethan.fletcher@x.dummyjson.com"
-            },
-            {
-              "rating": 2,
-              "comment": "Very disappointed!",
-              "date": "2024-05-23T08:56:21.627Z",
-              "reviewerName": "Nathan Dixon",
-              "reviewerEmail": "nathan.dixon@x.dummyjson.com"
-            },
-            {
-              "rating": 5,
-              "comment": "Great value for money!",
-              "date": "2024-05-23T08:56:21.627Z",
-              "reviewerName": "Savannah Gomez",
-              "reviewerEmail": "savannah.gomez@x.dummyjson.com"
-            }
-          ],
-          "returnPolicy": "90 days return policy",
-          "minimumOrderQuantity": 29,
-          "meta": {
-            "createdAt": "2024-05-23T08:56:21.627Z",
-            "updatedAt": "2024-05-23T08:56:21.627Z",
-            "barcode": "7641648910463",
-            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          {
+            "rating": 4,
+            "comment": "Great product!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Mason Parker",
+            "reviewerEmail": "mason.parker@x.dummyjson.com"
           },
-          "images": [
-            "https://cdn.dummyjson.com/products/images/womens-shoes/Black%20&%20Brown%20Slipper/1.png",
-            "https://cdn.dummyjson.com/products/images/womens-shoes/Black%20&%20Brown%20Slipper/2.png",
-            "https://cdn.dummyjson.com/products/images/womens-shoes/Black%20&%20Brown%20Slipper/3.png",
-            "https://cdn.dummyjson.com/products/images/womens-shoes/Black%20&%20Brown%20Slipper/4.png"
-          ],
-          "thumbnail": "https://cdn.dummyjson.com/products/images/womens-shoes/Black%20&%20Brown%20Slipper/thumbnail.png"
-        }
-      ],
+          {
+            "rating": 5,
+            "comment": "Fast shipping!",
+            "date": "2024-05-23T08:56:21.623Z",
+            "reviewerName": "Avery Perez",
+            "reviewerEmail": "avery.perez@x.dummyjson.com"
+          }
+        ],
+        "returnPolicy": "7 days return policy",
+        "minimumOrderQuantity": 2,
+        "meta": {
+          "createdAt": "2024-05-23T08:56:21.623Z",
+          "updatedAt": "2024-05-23T08:56:21.623Z",
+          "barcode": "0098559139691",
+          "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+        },
+        "images": [
+          "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/1.png",
+          "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/2.png",
+          "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/3.png",
+          "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/4.png"
+        ],
+        "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Air%20Jordan%201%20Red%20And%20Black/thumbnail.png"
+      }],
       "cart": [
         {
           "id": "88",
@@ -529,7 +463,7 @@
           "discountPercentage": 1.41,
           "rating": 4.19,
           "stock": 44,
-          "itemCount": 4,
+          "itemCount": 5,
           "tags": [
             "clothing",
             "men's shirts"
