@@ -3,7 +3,7 @@ import './Login.css';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 
-const Trail = () => {
+const Login = () => {
     const [users, setUsers] = useState([]);
     const [isLogin, setIsLogin] = useState(true);
     const [loginUsername, setLoginUsername] = useState('');
@@ -149,4 +149,4 @@ const Trail = () => {
     );
 };
 
-export default Trail;
+export default Login;
