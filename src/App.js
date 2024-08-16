@@ -8,7 +8,7 @@ import Footwear from './Components/Footwear/Footwear';
 function App() {
   return (
     <div className="App">
-      <Kids />
+      <Womens />
     </div>
   );
 }

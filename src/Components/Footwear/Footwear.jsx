@@ -4,22 +4,30 @@ import axios from 'axios';
 
 function Footwear() {
     const [footwear, setFootwear] = useState([]);
-    useEffect(() => {
 
-        axios.get(`http://localhost:8000/mens-footwear`).then((res) => {            
-          setFootwear(res.data);
-        });
-    }, []);
 
     const [username, setUsername] = useState(["John"]);
+    const [loading, setLoading] = useState(true);
 
-    const [cart, setCart] = useState([]);
-    useEffect(() => {
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000)
+    axios.get('http://localhost:8000/footwear').then((res) => {
+      setFootwear(res.data);
+    });
 
-        axios.get(`http://localhost:8000/users?username=${username}`).then((res) => {            
-          setCart(res.data[0].cart);
-        });
-    }, []);
+
+
+  }, [username]);
+
+    // const [cart, setCart] = useState([]);
+    // useEffect(() => {
+
+    //     axios.get(`http://localhost:8000/users?username=${username}`).then((res) => {            
+    //       setCart(res.data[0].cart);
+    //     });
+    // }, []);
 
     //   const [wishlist, setWishlist] = useState([]);
     // useEffect(() => {
@@ -106,6 +114,25 @@ function Footwear() {
 
   return (
     <div className="product-display">
+      {loading && (
+        <div className="loading-spinner">
+          <div class="page-content page-container" id="page-content">
+            <div class="padding">
+              <div class="row container d-flex justify-content-center">
+                <div class="col-md-4 col-sm-6 grid-margin stretch-card">
+                  <div class="loader-demo-box">
+                    <div class="jumping-dots-loader">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
   <h1>Footwear Collection</h1>
   <div className="product-display-container">
   {footwear.map(product=>(
@@ -122,8 +149,16 @@ function Footwear() {
         </p>
       </div>
       <div className="card-body wishlist">
-        <a className="btn wishlistButton" onClick={()=>{onAddWishlist(product)}}><i className="fa-solid fa-heart"></i> Wishlist</a>
-        <a className="btn wishlistButton" onClick={()=>{onAddCart(product)}}><i className="fa-solid fa-cart-shopping"></i> Add to Cart</a>
+      <a className='top-sellers-categories' onClick={()=>{onAddWishlist(product)}}>
+              <span className='top-border'></span>
+              <span><i className="fa-solid fa-heart"></i> Wishlist</span>
+              <span className='bottom-border'></span>
+            </a>
+            <a className='top-sellers-categories' onClick={()=>{onAddCart(product)}}>
+              <span className='top-border'></span>
+              <span><i className="fa-solid fa-cart-shopping"></i> Add to Cart</span>
+              <span className='bottom-border'></span>
+            </a>
         <p className="card-text">Size: S</p>
         <p className="card-text">
           Rs. {product.price} <span className="strikedPrice"><del>Rs. 1499</del></span> (68% off)
