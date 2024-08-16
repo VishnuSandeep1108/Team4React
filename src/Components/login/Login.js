@@ -86,6 +86,10 @@ const Login = () => {
 
     return (
         <div className="account-page">
+            <div className='form-background'>
+                <h1>My Account</h1>
+            </div>
+            <div className='container'>
             <div className="form-container">
                 <input type="radio" name="toggle" id="login" className="toggle-radio" checked={isLogin} onChange={() => setIsLogin(true)} />
                 <input type="radio" name="toggle" id="signup" className="toggle-radio" checked={!isLogin} onChange={() => setIsLogin(false)} />
@@ -133,7 +137,7 @@ const Login = () => {
                         <div className="terms">
                             <div className='terms-1'>
                                 <input type="checkbox" id="terms" {...signupRegister("terms", {
-                                    validate: validateTerms
+                                    validate:validateTerms
                                 })} />
                                 <label htmlFor="terms">I agree to Terms and Conditions</label>
                             </div>
@@ -144,6 +148,7 @@ const Login = () => {
                         <button type="submit" className="btn">Register</button>
                     </form>
                 )}
+            </div>
             </div>
         </div>
     );

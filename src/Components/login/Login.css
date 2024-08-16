@@ -1,18 +1,18 @@
 .account-page {
   min-height: 120vh;
-  background: url('../../../public/Login-images/top-view-black-friday-written-notepad.jpg') no-repeat center center/cover;
+  /* background: url('../../../public/Login-images/top-view-black-friday-written-notepad.jpg') no-repeat center center/cover; */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
+ flex-direction: column;
   box-sizing: border-box;
   overflow: hidden; 
 }
 
 .form-container {
   /* background-color: rgba(255, 255, 255, 0.9); */
-  background-color: lightgray;
-  width: 300px;
+  background-color: #fff;
+  width: 400px;
   padding: 20px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -136,8 +136,8 @@ input.ng-touched.ng-valid{
 .remember-me {
   display: flex;
   align-items: center;
-  margin-top: 10px;
-  margin-left: 80px;
+ text-align: center;
+ justify-content: center;
 }
 
 .remember-me input {
@@ -167,4 +167,26 @@ input.ng-touched.ng-valid{
 .terms label {
   font-size: 14px;
   color: #333;
+}
+.form-background{
+  background: url(../../../public/Login-images/top-view-black-friday-written-notepad.jpg) no-repeat center center/cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 600px;
+  text-align: center;
+  align-content: center;
+  font-size: 30px;
+  box-sizing: border-box;
+  overflow: hidden; 
+}
+.container{
+  display: flex;
+  background-color: #ccc;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  box-sizing: border-box;
+  overflow: hidden; 
 }
