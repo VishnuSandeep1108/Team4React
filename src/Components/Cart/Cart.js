@@ -4,7 +4,9 @@ import axios from 'axios';
 
 import './Cart.css';
 
-import emptyImg from './../../Assests/empty-cart.gif'
+import a from './empty-cart.gif'
+
+//import emptyImg from '../../Assests/empty-cart.gif'
 
 function Cart() {
     const [username,setUsername] = useState("a");
@@ -12,7 +14,7 @@ function Cart() {
     const[cart,setCart]=useState(null);
     const [totalPrice, setTotalPrice] = useState(0);
     const [Coupon,setCoupon]=useState("")
-    const{userID,setUserID}=useState("547a")
+    const[userID,setUserID]=useState("547a")
     let cartTax=0;
     let cartTotal=0;
     const [discount,setdiscount]=useState(0)
@@ -20,7 +22,7 @@ function Cart() {
 
     useEffect(
         ()=>{
-            axios.get(`http://localhost:9000/users?username=${username}`).then((user)=>{
+            axios.get(`http://localhost:3000/users/?username=${username}`).then((user)=>{
                 setCurrentUser(user.data[0]);
                 setCart(user.data[0].cart);       
                 totalPriceCalculator();
@@ -54,6 +56,8 @@ function Cart() {
 
     function countDecrease(cartItem,index)
     {
+        console.log("USERID: ",userID);
+        
         let temp = currentUser;
 
         temp.cart.forEach((tempItem)=>{
@@ -69,7 +73,7 @@ function Cart() {
 
         setCurrentUser(temp);
         setCart(temp.cart);
-        axios.put(`http://localhost:9000/users/id=${userID}`,temp).then(()=>{
+        axios.put(`http://localhost:3000/users/${userID}`,temp).then(()=>{
             console.log("Updated!");      
         })
         applyCode(totalPrice);
@@ -88,7 +92,7 @@ function Cart() {
 
         setCurrentUser(temp);
         setCart(temp.cart);
-        axios.put(`http://localhost:9000/users/id=${userID}`,temp).then(()=>{
+        axios.put(`http://localhost:3000/users/${userID}`,temp).then(()=>{
             console.log("Updated!");      
         })
         applyCode(totalPrice);
@@ -105,7 +109,7 @@ function Cart() {
             }
             setCurrentUser(temp)
             setCart(temp.cart)
-            axios.put(`http://localhost:9000/users/id=${userID}`,temp).then(()=>{
+            axios.put(`http://localhost:3000/users/${userID}`,temp).then(()=>{
                 console.log("Updated!");      
             })
         })
@@ -126,12 +130,27 @@ function Cart() {
                     })
                     
                 }
+                else
+                {
+                    alert("Invalid Coupon Code!")
+                }
+        
         // }
         
         setdiscount(d)
         
     }
- 
+
+    const onChangeHandler=(e)=>{
+        setCoupon(e.target.value)
+        let c=Coupon;
+        console.log("called")
+        if(c!="Happy10")
+        {setdiscount(0);
+            console.log("hi")
+        }
+        
+    } 
     return (    
     <div className='content-wrapper'>
         <div className='wrapper'>
@@ -142,42 +161,55 @@ function Cart() {
             return (
                 <div className='shop'>
                     <div className='box' key={cartItem.id}> 
+                    <p onClick={()=>removeItem(cartItem,index)} className="btn-area" >
+                            <i className="fa fa-close" style={{fontSize:'18px'}}></i>
+                            <span className="btn2" onClick={()=>removeItem(cartItem,index)}></span>
+                        </p>
                     <img src={cartItem.images[0]} />
                     <div className='content'>
-                    <h3>{cartItem.title}</h3>
-                    <h3>Price: Rs. {cartItem.price}</h3>
-                    <h3><span className='quantityBtn' onClick={()=>{countDecrease(cartItem,index)}}> - </span> &nbsp;<span>{cartItem.itemCount}</span> &nbsp;<span className='quantityBtn' onClick={()=>{countIncrease(cartItem)}}> + </span></h3>
-                    </div>
-                    <p className="btn-area" >
-                            <i className="fa fa-trash"></i>
-                            <span className="btn2" onClick={()=>removeItem(cartItem,index)}>Remove</span>
-                        </p>
-                    </div>  
+                            <span><h4>{cartItem.title}</h4></span><span><h4>Rs. {cartItem.price}</h4></span> <span><h4><span className='quantityBtn' onClick={()=>{countDecrease(cartItem,index)}}> - </span> &nbsp;<span>{cartItem.itemCount}</span> &nbsp;<span className='quantityBtn' onClick={()=>{countIncrease(cartItem)}}> + </span></h4></span>
+
+                   
+                    </div>    
+                    </div> 
                     </div> 
                 
                
             )
-            }):<div className='shop'><img className='empty-cart' src={emptyImg}/> </div>
+            }):<div className='shop'><img className='empty-cart' src={a}/> </div>
          }
          
         </div>
                 
         <div className='bar'>
         <div className='right-bar'>
-            <h3>Coupons</h3><br/>
-        <span><input type="text" onChange={(e)=>{setCoupon(e.target.value)}} placeholder='Enter Coupon Code'></input></span>&nbsp;<span>
-            <a onClick={()=>applyCode(totalPrice)}><i className='fas fa-tag'></i>Apply</a></span>
+            <h3>Coupons</h3>
+
+        <input type="text" onChange={onChangeHandler} placeholder='Enter Coupon Code'></input><br/>
+            {/* <a onClick={()=>applyCode(totalPrice)}><i className='fas fa-tag'></i>Apply</a></span> */}
+            <a className='top-sellers-categories' onClick={()=>applyCode(totalPrice)}>
+              <span className='top-border'></span>
+              <i className='fa fa-tag'></i>
+              <span>Apply Code</span>
+              <span className='bottom-border'></span>
+            </a>
+
         </div>    
         <div className='right-bar'>
         <h3>Price Details</h3>
-        <br/>
         <hr></hr>
         <br/>
         <p>Subtotal : Rs. {totalPrice.toFixed(2)} /-</p>
         <p>Tax (6%) : Rs. {cartTax.toFixed(2)} /-</p>
         <p>Discount : Rs. {discount.toFixed(2)} /-</p>
         <p>Total    : Rs. {cartTotal.toFixed(2)} /-</p>
-        <a><i className='fa fa-shopping-cart'></i>Place Order</a>
+        {/* <a><i className='fa fa-shopping-cart'></i>Place Order</a> */}
+        <a className='top-sellers-categories'>
+              <span className='top-border'></span>
+              <i className='fa fa-shopping-cart'></i>
+              <span>Place Order</span>
+              <span className='bottom-border'></span>
+            </a>
         </div>
         </div>
       </div>
