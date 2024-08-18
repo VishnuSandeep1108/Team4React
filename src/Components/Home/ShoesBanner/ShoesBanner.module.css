@@ -1,0 +1,177 @@
+.shoes-banner{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    height: 75vh;
+    margin-bottom: 70px;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+}
+
+.shoes-banner-left{
+    margin-top: 30%;
+    grid-column: span 2;
+    color: white;
+    font-size: 110%;
+    height: fit-content;
+}
+
+.shoes-banner-left p{
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.shoes-banner-right{
+    grid-column: span 3;
+    position: relative;
+}
+
+.shoes-banner-right-image{
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    animation: bounce 2s linear infinite;
+}
+
+.shoes-banner-button{
+    position: relative;
+    color: black;
+    background-color: rgb(255,255,255,0.1);
+    text-decoration: none;
+    font-size: 150%;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 15px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+}
+
+.top-border{
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 61%, transparent 61%, transparent 69%, rgb(0, 0, 0) 69%, rgb(0, 0, 0) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    transform: skew(-42deg);
+}
+
+.shoes-banner-button:hover .top-border{
+    animation: upperborder 20s linear infinite forwards;
+}
+
+.shoes-banner-button:hover{
+    color: black;
+    background-color: rgb(255,255,255,0.1);
+}
+
+.bottom-border{
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 35%, transparent 35%, transparent 43%, rgb(0, 0, 0) 43%, rgb(0, 0, 0) 100%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    transform: skew(-42deg);
+}
+
+.shoes-banner-button:hover .bottom-border{
+    animation: lowerborder 20s linear infinite forwards;
+}
+
+.edgtf-separator{
+    margin-bottom: 30px;
+}
+
+.edgtf-polygon {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.edgtf-polygon-1 {
+    transition-delay: 0.1s;
+}
+
+.edgtf-polygon-2 {
+    transition-delay: 0.2s;
+}
+
+.edgtf-polygon-3 {
+    transition-delay: 0.3s;
+}
+
+.edgtf-polygon-4 {
+    transition-delay: 0.4s;
+}
+
+.edgtf-polygon-5 {
+    transition-delay: 0.5s;
+}
+
+.edgtf-polygon-6 {
+    transition-delay: 0.6s;
+}
+
+.edgtf-separator.animate .edgtf-polygon {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes upperborder{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position: -1000px;
+    }
+}
+
+
+@keyframes lowerborder{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position: 1000px;
+    }
+}
+
+
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(8px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(-8px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* @media screen and (min-width: 1280px) {
+    .shoes-banner{
+        background-color: red;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .shoes-banner{
+        background-color: green;
+    }
+} */
+
+
+/* THIS SCREEEN: 1280 px */

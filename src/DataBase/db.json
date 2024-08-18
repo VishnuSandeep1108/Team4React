@@ -3596,5 +3596,589 @@
       ],
       "thumbnail": "https://cdn.dummyjson.com/products/images/tops/Tartan%20Dress/thumbnail.png"
     }
+  ],
+  "new-arrivals": [
+    {
+      "id": "83",
+      "title": "Blue & Black Check Shirt",
+      "description": "The Blue & Black Check Shirt is a stylish and comfortable men's shirt featuring a classic check pattern. Made from high-quality fabric, it's suitable for both casual and semi-formal occasions.",
+      "category": "mens-shirts",
+      "price": 29.99,
+      "discountPercentage": 1.41,
+      "rating": 4.19,
+      "stock": 44,
+      "itemCount": 1,
+      "relatedProducts":[84,85,86],
+      "tags": [
+        "clothing",
+        "men's shirts"
+      ],
+      "brand": "Fashion Trends",
+      "sku": "6RJDTVCU",
+      "weight": 6,
+      "dimensions": {
+        "width": 17.25,
+        "height": 27.31,
+        "depth": 20.88
+      },
+      "warrantyInformation": "No warranty",
+      "shippingInformation": "Ships in 1 month",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Avery Perez",
+          "reviewerEmail": "avery.perez@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Fast shipping!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Nathan Reed",
+          "reviewerEmail": "nathan.reed@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "7 days return policy",
+      "minimumOrderQuantity": 4,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.623Z",
+        "updatedAt": "2024-05-23T08:56:21.623Z",
+        "barcode": "8840720880947",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Blue%20&%20Black%20Check%20Shirt/thumbnail.png"
+    },
+    {
+      "id": "84",
+      "title": "Gigabyte Aorus Men Tshirt",
+      "description": "The Gigabyte Aorus Men Tshirt is a cool and casual shirt for gaming enthusiasts. With the Aorus logo and sleek design, it's perfect for expressing your gaming style.",
+      "category": "mens-shirts",
+      "price": 24.99,
+      "discountPercentage": 12.6,
+      "rating": 4.95,
+      "stock": 64,
+      "itemCount": 1,
+      "relatedProducts":[85,86,87],
+      "tags": [
+        "clothing",
+        "men's t-shirts"
+      ],
+      "brand": "Gigabyte",
+      "sku": "QA703Y60",
+      "weight": 2,
+      "dimensions": {
+        "width": 8.54,
+        "height": 23.52,
+        "depth": 5.66
+      },
+      "warrantyInformation": "1 month warranty",
+      "shippingInformation": "Ships in 1 week",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Highly recommended!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Logan Lawson",
+          "reviewerEmail": "logan.lawson@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great Product!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Pogan Lawson",
+          "reviewerEmail": "pogan.lawson@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Oscar Powers",
+          "reviewerEmail": "oscar.powers@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 4,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.623Z",
+        "updatedAt": "2024-05-23T08:56:21.623Z",
+        "barcode": "3072645939073",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Gigabyte%20Aorus%20Men%20Tshirt/thumbnail.png"
+    },
+    {
+      "id": "85",
+      "title": "Man Red Black Plaid Shirt",
+      "description": "The Man Plaid Shirt is a timeless and versatile men's shirt with a classic plaid pattern. Its comfortable fit and casual style make it a wardrobe essential for various occasions.",
+      "category": "mens-shirts",
+      "price": 34.99,
+      "discountPercentage": 17.53,
+      "rating": 3.66,
+      "stock": 65,
+      "itemCount": 1,
+      "relatedProducts":[86,87,83],
+      "tags": [
+        "clothing",
+        "men's shirts"
+      ],
+      "brand": "Classic Wear",
+      "sku": "TWL7HRBB",
+      "weight": 1,
+      "dimensions": {
+        "width": 29.56,
+        "height": 29.84,
+        "depth": 7.77
+      },
+      "warrantyInformation": "Lifetime warranty",
+      "shippingInformation": "Ships in 1 week",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 3,
+          "comment": "Would not buy again!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Nora Mills",
+          "reviewerEmail": "nora.mills@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Very disappointed!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Addison Ward",
+          "reviewerEmail": "addison.ward@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Awesome product!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Emily Brown",
+          "reviewerEmail": "emily.brown@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "30 days return policy",
+      "minimumOrderQuantity": 1,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.623Z",
+        "updatedAt": "2024-05-23T08:56:21.623Z",
+        "barcode": "9383795178668",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Plaid%20Shirt/thumbnail.png"
+    },
+    {
+      "id": "86",
+      "title": "Man Short Sleeve Shirt",
+      "description": "The Man Short Sleeve Shirt is a breezy and stylish option for warm days. With a comfortable fit and short sleeves, it's perfect for a laid-back yet polished look.",
+      "category": "mens-shirts",
+      "price": 19.99,
+      "discountPercentage": 8.65,
+      "rating": 4.62,
+      "stock": 20,
+      "itemCount": 1,
+      "relatedProducts":[87,83,84],
+      "tags": [
+        "clothing",
+        "men's shirts"
+      ],
+      "brand": "Casual Comfort",
+      "sku": "KEVGVDTV",
+      "weight": 2,
+      "dimensions": {
+        "width": 7.11,
+        "height": 28.63,
+        "depth": 27.54
+      },
+      "warrantyInformation": "5 year warranty",
+      "shippingInformation": "Ships in 2 weeks",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Caleb Nelson",
+          "reviewerEmail": "caleb.nelson@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Disappointing product!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Emily Johnson",
+          "reviewerEmail": "emily.johnson@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.623Z",
+          "reviewerName": "Mila Hernandez",
+          "reviewerEmail": "mila.hernandez@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "7 days return policy",
+      "minimumOrderQuantity": 1,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.623Z",
+        "updatedAt": "2024-05-23T08:56:21.623Z",
+        "barcode": "8162805546713",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/1.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/2.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/3.png",
+        "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shirts/Man%20Short%20Sleeve%20Shirt/thumbnail.png"
+    },
+    {
+      "id": "177",
+      "title": "Black Women's Gown",
+      "description": "The Black Women's Gown is an elegant and timeless evening gown. With a sleek black design, it's perfect for formal events and special occasions, exuding sophistication and style.",
+      "category": "womens-dresses",
+      "price": 129.99,
+      "discountPercentage": 5.86,
+      "rating": 4.77,
+      "stock": 59,
+      "itemCount": 1,
+      "relatedProducts":[178,179,180],
+      "tags": [
+        "clothing",
+        "gowns"
+      ],
+      "sku": "CL0LXEBG",
+      "weight": 7,
+      "dimensions": {
+        "width": 22.4,
+        "height": 22.15,
+        "depth": 21.87
+      },
+      "warrantyInformation": "Lifetime warranty",
+      "shippingInformation": "Ships in 1 month",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very satisfied!",
+          "date": "2024-05-23T08:56:21.627Z",
+          "reviewerName": "Aria Flores",
+          "reviewerEmail": "aria.flores@x.dummyjson.com"
+        },
+        {
+          "rating": 5,
+          "comment": "Great product!",
+          "date": "2024-05-23T08:56:21.627Z",
+          "reviewerName": "Stella Hughes",
+          "reviewerEmail": "stella.hughes@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Not as described!",
+          "date": "2024-05-23T08:56:21.627Z",
+          "reviewerName": "Mason Pearson",
+          "reviewerEmail": "mason.pearson@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "7 days return policy",
+      "minimumOrderQuantity": 2,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.627Z",
+        "updatedAt": "2024-05-23T08:56:21.627Z",
+        "barcode": "3515162615847",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Black%20Women's%20Gown/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Black%20Women's%20Gown/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Black%20Women's%20Gown/3.png",
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Black%20Women's%20Gown/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-dresses/Black%20Women's%20Gown/thumbnail.png"
+    },
+    {
+      "id": "178",
+      "title": "Corset Leather With Skirt",
+      "description": "The Corset Leather With Skirt is a bold and edgy ensemble that combines a stylish corset with a matching skirt. Ideal for fashion-forward individuals, it makes a statement at any event.",
+      "category": "womens-dresses",
+      "price": 89.99,
+      "discountPercentage": 19.26,
+      "rating": 2.52,
+      "stock": 59,
+      "itemCount": 1,
+      "relatedProducts":[179,180,181],
+      "tags": [
+        "clothing",
+        "corsets",
+        "skirts"
+      ],
+      "sku": "TU384RG4",
+      "weight": 1,
+      "dimensions": {
+        "width": 19.1,
+        "height": 27.47,
+        "depth": 29.95
+      },
+      "warrantyInformation": "6 months warranty",
+      "shippingInformation": "Ships overnight",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 3,
+          "comment": "Very unhappy with my purchase!",
+          "date": "2024-05-23T08:56:21.627Z",
+          "reviewerName": "Mason Parker",
+          "reviewerEmail": "mason.parker@x.dummyjson.com"
+        },
+        {
+          "rating": 3,
+          "comment": "Would not recommend!",
+          "date": "2024-05-23T08:56:21.627Z",
+          "reviewerName": "Grace Green",
+          "reviewerEmail": "grace.green@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.627Z",
+          "reviewerName": "Madison Stewart",
+          "reviewerEmail": "madison.stewart@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "60 days return policy",
+      "minimumOrderQuantity": 4,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.627Z",
+        "updatedAt": "2024-05-23T08:56:21.627Z",
+        "barcode": "5612433310069",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20Leather%20With%20Skirt/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20Leather%20With%20Skirt/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20Leather%20With%20Skirt/3.png",
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20Leather%20With%20Skirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20Leather%20With%20Skirt/thumbnail.png"
+    },
+    {
+      "id": "179",
+      "title": "Corset With Black Skirt",
+      "description": "The Corset With Black Skirt is a chic and versatile outfit that pairs a fashionable corset with a classic black skirt. It offers a trendy and coordinated look for various occasions.",
+      "category": "womens-dresses",
+      "price": 79.99,
+      "discountPercentage": 14.61,
+      "rating": 3,
+      "stock": 67,
+      "itemCount": 1,
+      "relatedProducts":[180,181,177],
+      "tags": [
+        "clothing",
+        "corsets",
+        "skirts"
+      ],
+      "sku": "KM6VKT38",
+      "weight": 6,
+      "dimensions": {
+        "width": 9.79,
+        "height": 26.72,
+        "depth": 14.21
+      },
+      "warrantyInformation": "Lifetime warranty",
+      "shippingInformation": "Ships in 2 weeks",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 4,
+          "comment": "Very happy with my purchase!",
+          "date": "2024-05-23T08:56:21.627Z",
+          "reviewerName": "Nolan Bryant",
+          "reviewerEmail": "nolan.bryant@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.627Z",
+          "reviewerName": "Julian Newton",
+          "reviewerEmail": "julian.newton@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Highly impressed!",
+          "date": "2024-05-23T08:56:21.627Z",
+          "reviewerName": "Elena Baker",
+          "reviewerEmail": "elena.baker@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "No return policy",
+      "minimumOrderQuantity": 3,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.627Z",
+        "updatedAt": "2024-05-23T08:56:21.627Z",
+        "barcode": "1585516684321",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20With%20Black%20Skirt/1.png",
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20With%20Black%20Skirt/2.png",
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20With%20Black%20Skirt/3.png",
+        "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20With%20Black%20Skirt/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/womens-dresses/Corset%20With%20Black%20Skirt/thumbnail.png"
+    },
+    {
+      "id": "162",
+      "title": "Blue Frock",
+      "description": "The Blue Frock is a charming and stylish dress for various occasions. With a vibrant blue color and a comfortable design, it adds a touch of elegance to your wardrobe.",
+      "category": "tops",
+      "price": 29.99,
+      "discountPercentage": 9.37,
+      "rating": 3.57,
+      "stock": 37,
+      "itemCount": 1,
+      "relatedProducts":[163,164,165],
+      "tags": [
+        "clothing",
+        "dresses"
+      ],
+      "sku": "YAXY0OOO",
+      "weight": 2,
+      "dimensions": {
+        "width": 22.85,
+        "height": 26.97,
+        "depth": 12.29
+      },
+      "warrantyInformation": "1 week warranty",
+      "shippingInformation": "Ships in 1 week",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 2,
+          "comment": "Very dissatisfied!",
+          "date": "2024-05-23T08:56:21.626Z",
+          "reviewerName": "Carter Rivera",
+          "reviewerEmail": "carter.rivera@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Very disappointed!",
+          "date": "2024-05-23T08:56:21.626Z",
+          "reviewerName": "Harper Garcia",
+          "reviewerEmail": "harper.garcia@x.dummyjson.com"
+        },
+        {
+          "rating": 1,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.626Z",
+          "reviewerName": "Violet Roberts",
+          "reviewerEmail": "violet.roberts@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "7 days return policy",
+      "minimumOrderQuantity": 19,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.626Z",
+        "updatedAt": "2024-05-23T08:56:21.626Z",
+        "barcode": "3867112520929",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/tops/Blue%20Frock/1.png",
+        "https://cdn.dummyjson.com/products/images/tops/Blue%20Frock/2.png",
+        "https://cdn.dummyjson.com/products/images/tops/Blue%20Frock/3.png",
+        "https://cdn.dummyjson.com/products/images/tops/Blue%20Frock/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/tops/Blue%20Frock/thumbnail.png"
+    },
+    {
+      "id": "163",
+      "title": "Girl Summer Dress",
+      "description": "The Girl Summer Dress is a cute and breezy dress designed for warm weather. With playful patterns and lightweight fabric, it's perfect for keeping cool and stylish during the summer.",
+      "category": "tops",
+      "price": 19.99,
+      "discountPercentage": 6.42,
+      "rating": 2.67,
+      "stock": 20,
+      "itemCount": 1,
+      "relatedProducts":[166,164,165],
+      "tags": [
+        "clothing",
+        "girls' dresses"
+      ],
+      "sku": "99397X82",
+      "weight": 3,
+      "dimensions": {
+        "width": 8.02,
+        "height": 5.01,
+        "depth": 20.55
+      },
+      "warrantyInformation": "1 month warranty",
+      "shippingInformation": "Ships in 3-5 business days",
+      "availabilityStatus": "In Stock",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "Very pleased!",
+          "date": "2024-05-23T08:56:21.626Z",
+          "reviewerName": "Gabriel Adams",
+          "reviewerEmail": "gabriel.adams@x.dummyjson.com"
+        },
+        {
+          "rating": 2,
+          "comment": "Poor quality!",
+          "date": "2024-05-23T08:56:21.626Z",
+          "reviewerName": "Addison Ward",
+          "reviewerEmail": "addison.ward@x.dummyjson.com"
+        },
+        {
+          "rating": 4,
+          "comment": "Great value for money!",
+          "date": "2024-05-23T08:56:21.626Z",
+          "reviewerName": "Nora Mills",
+          "reviewerEmail": "nora.mills@x.dummyjson.com"
+        }
+      ],
+      "returnPolicy": "No return policy",
+      "minimumOrderQuantity": 5,
+      "meta": {
+        "createdAt": "2024-05-23T08:56:21.626Z",
+        "updatedAt": "2024-05-23T08:56:21.626Z",
+        "barcode": "1171873054762",
+        "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+      },
+      "images": [
+        "https://cdn.dummyjson.com/products/images/tops/Girl%20Summer%20Dress/1.png",
+        "https://cdn.dummyjson.com/products/images/tops/Girl%20Summer%20Dress/2.png",
+        "https://cdn.dummyjson.com/products/images/tops/Girl%20Summer%20Dress/3.png",
+        "https://cdn.dummyjson.com/products/images/tops/Girl%20Summer%20Dress/4.png"
+      ],
+      "thumbnail": "https://cdn.dummyjson.com/products/images/tops/Girl%20Summer%20Dress/thumbnail.png"
+    }
   ]
 }

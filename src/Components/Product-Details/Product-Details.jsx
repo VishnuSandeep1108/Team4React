@@ -1,129 +1,134 @@
-import React, { useEffect, useState } from 'react';
-import { FaArrowLeft, FaArrowRight, FaUserCheck, FaUserGear } from 'react-icons/fa6';
+import React, { useState,useEffect, useContext } from 'react';
 import axios from 'axios';
 
-import "./Product-Details.css";
-import { FaUser, FaUserAlt, FaUserAltSlash, FaUserAstronaut, FaUserCircle } from 'react-icons/fa';
+import styles from "./Product-Details.module.css";
+
+import { FaChevronLeft,FaChevronRight } from 'react-icons/fa6';
+
+import { CategoryContext } from '../../App';
+import { ProductIdContext } from '../../App';
 
 function ProductDetails() {
+const {category, setCategory} = useContext(CategoryContext);
+const {productId, setProductId} = useContext(ProductIdContext);
+const [productDetails, setProductDetails] = useState(null);
+const [currentImageIndex, setCurrentImageIndex] = useState(0);
+const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
+const [relatedProducts, setRelatedProducts] = useState([]);
 
-  const [productId,setProductId] = useState(84);
-  const [category,setCategory] = useState("mens");
-
-  const [productDetails, setProductDetails] = useState(null);
-  const [relatedProducts, setRelatedProducts] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [reviewIndex, setReviewIndex] = useState(1);
-
-  useEffect(()=>{
-    let interval;
+useEffect(()=>{
     axios.get(`http://localhost:8000/${category}/${productId}`).then((fetchedDetails)=>{     
-      setProductDetails(fetchedDetails.data);
-      console.log(fetchedDetails.data.reviews.length);
+        setProductDetails(fetchedDetails.data);
 
+        setRelatedProducts([]);
 
-      let temp = [];
-      fetchedDetails.data.relatedProducts.map((relatedProductId)=>{
-        axios.get(`http://localhost:8000/${category}/${relatedProductId}`).then((fetchedRelatedProduct)=>{ 
-          
-          temp.push(fetchedRelatedProduct.data);         
+        fetchedDetails.data.relatedProducts.map((relatedProductId)=>{
+            axios.get(`http://localhost:8000/${category}/${relatedProductId}`).then((relatedProduct)=>{
+                setRelatedProducts(prevRelatedProducts => [...prevRelatedProducts, relatedProduct.data]);
+            })
         })
-        
-      })
-      setRelatedProducts(temp);   
-
-
-      
-      interval =  setInterval(()=>{
-        setReviewIndex((prevValue) => {
-          if(prevValue!=fetchedDetails.data.reviews.length-1)
-            return prevValue+1;
-          else
-            return 1;
-        })   
-      },5000)
     })
+
+    let interval = setInterval(()=>{
+        setCurrentReviewIndex((prevValue)=>{
+            if(prevValue!=2)
+                return prevValue+1;
+            else
+                return 0;
+        })
+    },5000)
 
     return (()=>{
-      clearInterval(interval);
+        clearInterval(interval);
     })
-  },[productId])
+},[productId])
 
   return (
-    productDetails? <div className='product-details-container'>
-    <div className='product-details-top'>
-      <div className='product-details-top-left'>
-        <div className='product-details-top-left-image'>
-          <img src={productDetails.images[currentIndex]}></img>
-          <h3 onClick={()=>{
-            if(currentIndex!=0)
-              setCurrentIndex(prevValue=>prevValue-1);
-            else
-              setCurrentIndex(3);
-          }} className='product-details-left-arrow'>&lt;</h3>
-          <h3 onClick={()=>{
-            if(currentIndex!=3)
-              setCurrentIndex(prevValue=>prevValue+1);
-            else
-              setCurrentIndex(0);
-          }} className='product-details-right-arrow'>&gt;</h3>
-          {/* <FaArrowRight className='product-details-right-arrow'/> */}
-        </div>
-      </div>
-      <div className='product-details-top-right'>
-        <div className='product-details-top-right-inner'>
-          <h1>{productDetails.title}</h1>
-          <h3>{productDetails.price}$</h3>
-          <p className='rating'><i data-star={productDetails.rating}></i></p>
-          <p className='description'>{productDetails.description}</p>
-          <a className='product-details-button wishlist-button'>
-            <span className='top-border'></span>
-            <span>Add to Wishlist</span>
-            <span className='bottom-border'></span>
-          </a>
-          <a className='product-details-button cart-button'>
-            <span className='top-border'></span>
-            <span>Add to Cart</span>
-            <span className='bottom-border'></span>
-          </a>
-
-          <p className='sku'>SKU: {productDetails.sku}</p>
-          <p className='category'>Category: {productDetails.category}</p>
-          {/* <p className='brand'>Brand: {productDetails.brand}</p> */}
-        </div>
-      </div>
-    </div>
-    <div className='product-details-middle'>
-      <h1>Reviews</h1>
-
-          <div className='product-review'>
-          {reviewIndex && (
-            <div>
-            <i data-star={productDetails.reviews[reviewIndex].rating}></i>
-            <p>{productDetails.reviews[reviewIndex].reviewerName} - {productDetails.reviews[reviewIndex].date.substr(0,10)}</p>
-            <p>{productDetails.reviews[reviewIndex].comment}</p>
-          </div>)}
-          </div>
-
-    </div>
-    <div className='product-details-bottom'>
-      <h1>Related Products</h1>
-      <div className='related-products'>
-        {relatedProducts && relatedProducts.map((relatedProduct)=>{
-          return (
-            <div className='related-product-card'>
-              <img className='related-product-image' src={relatedProduct.images[0]} />
-              <div className='related-product-details'>
-                  <h3>{relatedProduct.title}</h3>
-                  <h3>{relatedProduct.brand}</h3>
-                  <i data-star={relatedProduct.rating}></i>
-              </div>
+    productDetails ? (
+        <div className={styles[`product-details-container`]}>
+            <div className={styles[`product-display`]}>
+                <div className={styles[`product-images`]}>
+                    <img src={productDetails.images[currentImageIndex]}></img>
+                    <FaChevronLeft onClick={()=>{setCurrentImageIndex((prevValue) => {
+                        if(prevValue!=0)
+                            return prevValue-1;
+                        else
+                            return 3;
+                    })}} className={styles[`product-images-left-arrow`]} />
+                    <FaChevronRight onClick={()=>{setCurrentImageIndex((prevValue) => {
+                        if(prevValue!=3)
+                            return prevValue+1;
+                        else
+                            return 0;
+                    })}} className={styles[`product-images-right-arrow`]} />
+                </div>
+                <div className={styles[`product-details`]}>
+                    <h1>{productDetails.title}</h1>
+                    <h3>{Math.round(((100-productDetails.discountPercentage)*(productDetails.price))/100)}$ <span className={styles[`org-price`]}>{(productDetails.price)}$</span> <span className={styles[`discount`]}>({productDetails.discountPercentage}% Off)</span></h3>
+                    <p className={styles[`rating`]}><i data-star={productDetails.rating}></i></p>
+                    <p className={styles[`description`]}>{productDetails.description}</p>
+                    <a className={`${styles[`product-details-button`]} ${styles[`wishlist-button`]}`}>
+                        <span className={styles[`top-border`]}></span>
+                        <span>Add to Wishlist</span>
+                        <span className={styles[`bottom-border`]}></span>
+                    </a>
+                    <a className={`${styles[`product-details-button`]} ${styles[`cart-button`]}`}>
+                        <span className={styles[`top-border`]}></span>
+                        <span>Add to Cart</span>
+                        <span className={styles[`bottom-border`]}></span>
+                    </a>
+                    <p className={styles[`sku`]}>SKU: {productDetails.sku}</p>
+                    <p className={styles[`category`]}>Category: {productDetails.category}</p>
+                </div>
             </div>
-          )
-        })}
-      </div>
-    </div>
-  </div>:<h1>Fetching </h1>
+
+            <div className={styles[`product-reviews`]}>
+                <h3>Reviews</h3>
+                {productDetails ? (
+                    <div className={styles[`product-review`]}>
+                        <div className={styles[`product-review-image`]}>
+                            <img src='./ProductDetails-Images/user.png'/>
+                        </div>
+                        <div className={styles[`product-review-details`]}>
+                            <i data-star={productDetails.reviews[currentReviewIndex].rating}></i>
+                            <p>{productDetails.reviews[currentReviewIndex].reviewerName} - {productDetails.reviews[currentReviewIndex].date.substr(0,10)}</p>
+                            <p>{productDetails.reviews[currentReviewIndex].comment}</p>
+                        </div>
+                    </div>
+                ) : (
+                    <h1>Fetching Reviews ...</h1>
+                )}
+            </div>
+
+            <div className={styles[`related-products-container`]}>
+                <h3>Related Products</h3>
+                {relatedProducts ? (                    
+                    <div className={styles[`related-products`]}>
+                        {relatedProducts.map((relatedProduct)=>{                        
+                        return (
+                            <div onClick={()=>{setProductId(relatedProduct.id); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className={styles[`related-product`]}>
+                                <div className={styles[`related-product-image`]}>
+                                    <img src={relatedProduct.images[0]} />
+                                </div>
+
+                                <div className={styles[`related-product-details`]}>
+                                    <h3>{relatedProduct.title}</h3>
+                                    <h3>{relatedProduct.brand}</h3>
+                                    <i data-star={relatedProduct.rating}></i>
+                                    <h3>{Math.round(((100-relatedProduct.discountPercentage)*(relatedProduct.price))/100)}$ <span className={styles[`org-price`]}>{(relatedProduct.price)}$</span> <span className={styles[`discount`]}>({relatedProduct.discountPercentage}% Off)</span></h3>
+                                </div>
+                            </div>
+                            )
+                        })}
+                    </div>
+                ) : (
+                    <h1>Fetching Related Products...</h1>
+                )}
+            </div>
+        </div>
+    ) : (
+        <div className={styles[`loader`]}></div>
+    )
   )
 }
 

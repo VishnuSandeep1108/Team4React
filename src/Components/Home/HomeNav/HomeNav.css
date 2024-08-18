@@ -1,0 +1,47 @@
+nav{
+    background-color: transparent;
+    z-index: 100;
+}
+
+.navbar-brand{
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.nav-link{
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+
+.navbar-brand, .nav-link{
+    color: white;
+    font-weight: bold;
+    margin: 0 23px;
+    font-size: 180%;
+    text-shadow: 1px 1px 1px black;
+}
+
+.nav-link{
+    font-weight: 700;
+    font-size: 120%;
+}
+
+.navbar-toggler-icon{
+    padding: 1px;
+    color: white;
+    border: 2px solid white;
+}
+
+.nav-item:nth-child(5)
+{
+    margin-right: 70px;
+}
+
+@media screen and (min-width: 1440px) {
+    .nav-item:nth-child(5)
+    {
+        margin-right: 250px;
+    }
+}

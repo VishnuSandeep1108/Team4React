@@ -9,7 +9,7 @@ import ShoesBanner from './ShoesBanner/ShoesBanner';
 import Magazines from './Magazines/Magazines';
 import Subscribe from './Subscribe/Subscribe';
 
-import "./Home.css";
+import styles from "./Home.module.css";
 
 function Home() {
 
@@ -29,12 +29,12 @@ function Home() {
   }
 
   return (
-    <div className='home-container'>
+    <div className={styles[`home-container`]}>
 
-      <div style={homeCarouselTopStyle} className='home'>
+      <div style={homeCarouselTopStyle} className={styles[`home`]}>
         <HomeNav />
         <Carousel setHomeImgUrl={setHomeImgUrl} />
-        <div className='black-screen'></div>
+        <div className={styles[`black-screen`]}></div>
       </div>
 
       <TopSellers />

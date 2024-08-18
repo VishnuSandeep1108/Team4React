@@ -1,0 +1,117 @@
+.subscribe-container{
+    background-image: url("../../../../public/Home-Images/subscribe11.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 35%;
+    width: 100%;
+    height: fit-content;
+    padding: 50px;
+    /* margin-bottom: 50px; */
+}
+
+.subscribe-form-container{
+    background-color: rgba(211,211,211,0.8);
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.1);
+    border-radius: 8px;
+    width: 50%;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.subscribe-form-container > h3, .subscribe-form-container > p{
+    margin: 0 auto;
+}
+
+.subscribe-form-container > p{
+    margin-bottom: 20px;
+}
+
+.subscribe-form > input {
+    border-radius: 8px;
+    width: 300px;
+    height: 30px;
+    margin:  0 auto;
+    padding-left: 10px;
+}
+
+.subscribe-form > button{
+    background-color: rgb(18,5,5);
+    color: #fff;
+    border-radius: 4px;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.subscribe-button{
+    position: relative;
+    background-color: rgb(18,5,5);
+    color: #fff;
+    text-decoration: none;
+    font-size: 150%;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 15px;
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+}
+
+.top-border{
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    transform: skew(-42deg);
+}
+
+.subscribe-button:hover .top-border{
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 61%, transparent 61%, transparent 69%, rgb(0, 0, 0) 69%, rgb(0, 0, 0) 100%);
+    animation: upperborder 20s linear infinite forwards;
+}
+
+.subscribe-button:hover{
+    color: black;
+    background-color: rgb(255,255,255,0.1);
+}
+
+.bottom-border{
+    background: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    transform: skew(-42deg);
+}
+
+.subscribe-button:hover .bottom-border{
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 35%, transparent 35%, transparent 43%, rgb(0, 0, 0) 43%, rgb(0, 0, 0) 100%);
+    animation: lowerborder 20s linear infinite forwards;
+}
+
+@keyframes upperborder{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position: -1000px;
+    }
+}
+
+
+@keyframes lowerborder{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position: 1000px;
+    }
+}
