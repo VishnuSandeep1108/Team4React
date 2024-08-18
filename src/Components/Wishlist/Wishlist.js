@@ -4,6 +4,7 @@ import h from './empty-wishlist.png'
 import axios from 'axios'
 import { Dropdown } from 'bootstrap'
 function Wishlist() {
+    const [searchee,setSearch]=useState(['clothing','mens-shirts','womens-dresses','womens-shoes','footwear','mens-shoes',''])
     const [username,setUsername]=useState('John')
     const [userid,setid]=useState('aacd')
     const[data,setData]=useState([])
@@ -54,7 +55,22 @@ function Wishlist() {
     }
     
     const search=(event)=>{
-        hhh(event.target.value)
+        const id=event.target.value
+      let flag=false
+        for(let i of searchee){
+       
+            if (id===i.substring(0,id.length)){
+                hhh(i)
+                flag=true
+            }
+            console.log(i.substring(0,id.length))
+            console.log(id)
+        }
+        if(!flag){
+            hhh('Not Found')
+        }
+
+
     }
   return (
 
@@ -72,7 +88,6 @@ function Wishlist() {
               <span className='bottom-border'></span> </a> <a className='top-sellers-categories' onClick={()=>categoryy('anything')}> <span className='top-border'></span>
               <span>All Categories</span>
               <span className='bottom-border'></span> </a>  <input type='text' className='styled-input' onChange={search}></input>
-             
   {/* {n.map((i)=>{console.log(i)})} */}
 <div className='wrapper'>
 {/* {data.map((i)=>{return <div>{i.wishlist.map((j)=>{return <div className='box'><img src={j.images[0]}></img><h3>{j.title}</h3><h5>{j.price}</h5><button className='button button1' onClick={()=>cartadd(j)}>Add to Cart</button><button className='button button2'>Delete</button></div>})} 

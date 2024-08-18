@@ -4,7 +4,71 @@
       "id": "aacd",
       "username": "John",
       "password": "j",
-      "wishlist": [ {
+      "wishlist": [ 
+        {
+          "id": "187",
+          "title": "Golden Shoes Woman",
+          "description": "The Golden Shoes for Women are a glamorous choice for special occasions. Featuring a golden hue and stylish design, they add a touch of luxury to your outfit.",
+          "category": "womens-shoes",
+          "price": 49.99,
+          "discountPercentage": 14.93,
+          "rating": 4.82,
+          "stock": 99,
+          "itemCount": 1,
+          "tags": [
+            "footwear",
+            "women's shoes"
+          ],
+          "brand": "Fashion Diva",
+          "sku": "U52NOLI2",
+          "weight": 3,
+          "dimensions": {
+            "width": 15.32,
+            "height": 27.84,
+            "depth": 21.06
+          },
+          "warrantyInformation": "5 year warranty",
+          "shippingInformation": "Ships in 1-2 business days",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 4,
+              "comment": "Excellent quality!",
+              "date": "2024-05-23T08:56:21.628Z",
+              "reviewerName": "Owen Fisher",
+              "reviewerEmail": "owen.fisher@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Fast shipping!",
+              "date": "2024-05-23T08:56:21.628Z",
+              "reviewerName": "Xavier Wright",
+              "reviewerEmail": "xavier.wright@x.dummyjson.com"
+            },
+            {
+              "rating": 5,
+              "comment": "Very pleased!",
+              "date": "2024-05-23T08:56:21.628Z",
+              "reviewerName": "William Gonzalez",
+              "reviewerEmail": "william.gonzalez@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "No return policy",
+          "minimumOrderQuantity": 19,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.628Z",
+            "updatedAt": "2024-05-23T08:56:21.628Z",
+            "barcode": "0008484295237",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/1.png",
+            "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/2.png",
+            "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/3.png",
+            "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/4.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/womens-shoes/Golden%20Shoes%20Woman/thumbnail.png"
+        },{
         "id": "88",
         "title": "Nike Air Jordan 1 Red And Black",
         "description": "The Nike Air Jordan 1 in Red and Black is an iconic basketball sneaker known for its stylish design and high-performance features, making it a favorite among sneaker enthusiasts and athletes.",
