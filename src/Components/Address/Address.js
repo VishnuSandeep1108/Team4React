@@ -138,6 +138,17 @@ function Address() {
 
 
 
+
+}
+
+export default Address
+
+
+
+
+
+
+
 //     const [ContactForm,setContactForm]=useState({
 //          name:'',
 //          number:''
@@ -171,6 +182,3 @@ function Address() {
 //         </div> */}
 //       </div>
 //   )
-}
-
-export default Address
