@@ -281,7 +281,7 @@
           "discountPercentage": 3.64,
           "rating": 4.85,
           "stock": 10,
-          "itemCount": 2,
+          "itemCount": 4,
           "tags": [
             "footwear",
             "casual shoes"
@@ -364,7 +364,11 @@
       "rating": 4.19,
       "stock": 44,
       "itemCount": 1,
-      "relatedProducts":[84,85,86],
+      "relatedProducts": [
+        84,
+        85,
+        86
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -429,7 +433,11 @@
       "rating": 4.95,
       "stock": 64,
       "itemCount": 1,
-      "relatedProducts":[85,86,87],
+      "relatedProducts": [
+        85,
+        86,
+        87
+      ],
       "tags": [
         "clothing",
         "men's t-shirts"
@@ -494,7 +502,11 @@
       "rating": 3.66,
       "stock": 65,
       "itemCount": 1,
-      "relatedProducts":[86,87,83],
+      "relatedProducts": [
+        86,
+        87,
+        83
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -559,7 +571,11 @@
       "rating": 4.62,
       "stock": 20,
       "itemCount": 1,
-      "relatedProducts":[87,83,84],
+      "relatedProducts": [
+        87,
+        83,
+        84
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -624,7 +640,11 @@
       "rating": 2.9,
       "stock": 69,
       "itemCount": 1,
-      "relatedProducts":[83,84,85],
+      "relatedProducts": [
+        83,
+        84,
+        85
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -689,7 +709,11 @@
       "rating": 4.19,
       "stock": 44,
       "itemCount": 1,
-      "relatedProducts":[84,85,86],
+      "relatedProducts": [
+        84,
+        85,
+        86
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -754,7 +778,11 @@
       "rating": 4.95,
       "stock": 64,
       "itemCount": 1,
-      "relatedProducts":[85,86,87],
+      "relatedProducts": [
+        85,
+        86,
+        87
+      ],
       "tags": [
         "clothing",
         "men's t-shirts"
@@ -819,7 +847,11 @@
       "rating": 3.66,
       "stock": 65,
       "itemCount": 1,
-      "relatedProducts":[86,87,83],
+      "relatedProducts": [
+        86,
+        87,
+        83
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -884,7 +916,11 @@
       "rating": 4.62,
       "stock": 20,
       "itemCount": 1,
-      "relatedProducts":[87,83,84],
+      "relatedProducts": [
+        87,
+        83,
+        84
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -949,7 +985,11 @@
       "rating": 2.9,
       "stock": 69,
       "itemCount": 1,
-      "relatedProducts":[83,84,85],
+      "relatedProducts": [
+        83,
+        84,
+        85
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -1016,7 +1056,11 @@
       "rating": 4.77,
       "stock": 59,
       "itemCount": 1,
-      "relatedProducts":[178,179,180],
+      "relatedProducts": [
+        178,
+        179,
+        180
+      ],
       "tags": [
         "clothing",
         "gowns"
@@ -1080,7 +1124,11 @@
       "rating": 2.52,
       "stock": 59,
       "itemCount": 1,
-      "relatedProducts":[179,180,181],
+      "relatedProducts": [
+        179,
+        180,
+        181
+      ],
       "tags": [
         "clothing",
         "corsets",
@@ -1145,7 +1193,11 @@
       "rating": 3,
       "stock": 67,
       "itemCount": 1,
-      "relatedProducts":[180,181,177],
+      "relatedProducts": [
+        180,
+        181,
+        177
+      ],
       "tags": [
         "clothing",
         "corsets",
@@ -1210,7 +1262,11 @@
       "rating": 2.92,
       "stock": 29,
       "itemCount": 1,
-      "relatedProducts":[181,177,178],
+      "relatedProducts": [
+        181,
+        177,
+        178
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -1274,7 +1330,11 @@
       "rating": 4.17,
       "stock": 15,
       "itemCount": 1,
-      "relatedProducts":[178,179,177],
+      "relatedProducts": [
+        178,
+        179,
+        177
+      ],
       "tags": [
         "clothing",
         "suits"
@@ -1338,7 +1398,11 @@
       "rating": 4.77,
       "stock": 59,
       "itemCount": 1,
-      "relatedProducts":[178,179,180],
+      "relatedProducts": [
+        178,
+        179,
+        180
+      ],
       "tags": [
         "clothing",
         "gowns"
@@ -1402,7 +1466,11 @@
       "rating": 2.52,
       "stock": 59,
       "itemCount": 1,
-      "relatedProducts":[181,179,180],
+      "relatedProducts": [
+        181,
+        179,
+        180
+      ],
       "tags": [
         "clothing",
         "corsets",
@@ -1467,7 +1535,11 @@
       "rating": 3,
       "stock": 67,
       "itemCount": 1,
-      "relatedProducts":[181,177,180],
+      "relatedProducts": [
+        181,
+        177,
+        180
+      ],
       "tags": [
         "clothing",
         "corsets",
@@ -1532,7 +1604,11 @@
       "rating": 2.92,
       "stock": 29,
       "itemCount": 1,
-      "relatedProducts":[177,178,181],
+      "relatedProducts": [
+        177,
+        178,
+        181
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -1596,7 +1672,11 @@
       "rating": 4.17,
       "stock": 15,
       "itemCount": 1,
-      "relatedProducts":[178,179,177],
+      "relatedProducts": [
+        178,
+        179,
+        177
+      ],
       "tags": [
         "clothing",
         "suits"
@@ -1662,7 +1742,11 @@
       "rating": 2.77,
       "stock": 15,
       "itemCount": 1,
-      "relatedProducts":[89,90,91],
+      "relatedProducts": [
+        89,
+        90,
+        91
+      ],
       "tags": [
         "footwear",
         "athletic shoes"
@@ -1727,7 +1811,11 @@
       "rating": 4.01,
       "stock": 14,
       "itemCount": 1,
-      "relatedProducts":[92,90,91],
+      "relatedProducts": [
+        92,
+        90,
+        91
+      ],
       "tags": [
         "footwear",
         "sports cleats"
@@ -1792,7 +1880,11 @@
       "rating": 4.85,
       "stock": 10,
       "itemCount": 1,
-      "relatedProducts":[88,92,91],
+      "relatedProducts": [
+        88,
+        92,
+        91
+      ],
       "tags": [
         "footwear",
         "casual shoes"
@@ -1857,7 +1949,11 @@
       "rating": 4.92,
       "stock": 73,
       "itemCount": 1,
-      "relatedProducts":[89,88,92],
+      "relatedProducts": [
+        89,
+        88,
+        92
+      ],
       "tags": [
         "footwear",
         "athletic shoes"
@@ -1922,7 +2018,11 @@
       "rating": 2.95,
       "stock": 75,
       "itemCount": 1,
-      "relatedProducts":[89,90,88],
+      "relatedProducts": [
+        89,
+        90,
+        88
+      ],
       "tags": [
         "footwear",
         "casual shoes"
@@ -1987,7 +2087,11 @@
       "rating": 2.77,
       "stock": 15,
       "itemCount": 1,
-      "relatedProducts":[89,90,91],
+      "relatedProducts": [
+        89,
+        90,
+        91
+      ],
       "tags": [
         "footwear",
         "athletic shoes"
@@ -2052,7 +2156,11 @@
       "rating": 4.01,
       "stock": 14,
       "itemCount": 1,
-      "relatedProducts":[92,90,91],
+      "relatedProducts": [
+        92,
+        90,
+        91
+      ],
       "tags": [
         "footwear",
         "sports cleats"
@@ -2117,7 +2225,11 @@
       "rating": 4.85,
       "stock": 10,
       "itemCount": 1,
-      "relatedProducts":[88,92,91],
+      "relatedProducts": [
+        88,
+        92,
+        91
+      ],
       "tags": [
         "footwear",
         "casual shoes"
@@ -2182,7 +2294,11 @@
       "rating": 4.92,
       "stock": 73,
       "itemCount": 1,
-      "relatedProducts":[89,88,92],
+      "relatedProducts": [
+        89,
+        88,
+        92
+      ],
       "tags": [
         "footwear",
         "athletic shoes"
@@ -2247,7 +2363,11 @@
       "rating": 2.95,
       "stock": 75,
       "itemCount": 1,
-      "relatedProducts":[89,90,88],
+      "relatedProducts": [
+        89,
+        90,
+        88
+      ],
       "tags": [
         "footwear",
         "casual shoes"
@@ -2314,7 +2434,11 @@
       "rating": 4.13,
       "stock": 80,
       "itemCount": 1,
-      "relatedProducts":[186,187,188],
+      "relatedProducts": [
+        186,
+        187,
+        188
+      ],
       "tags": [
         "footwear",
         "slippers"
@@ -2379,7 +2503,11 @@
       "rating": 4.06,
       "stock": 99,
       "itemCount": 1,
-      "relatedProducts":[189,187,188],
+      "relatedProducts": [
+        189,
+        187,
+        188
+      ],
       "tags": [
         "footwear",
         "heel shoes"
@@ -2444,7 +2572,11 @@
       "rating": 4.82,
       "stock": 99,
       "itemCount": 1,
-      "relatedProducts":[189,185,188],
+      "relatedProducts": [
+        189,
+        185,
+        188
+      ],
       "tags": [
         "footwear",
         "women's shoes"
@@ -2509,7 +2641,11 @@
       "rating": 3.01,
       "stock": 36,
       "itemCount": 1,
-      "relatedProducts":[189,185,186],
+      "relatedProducts": [
+        189,
+        185,
+        186
+      ],
       "tags": [
         "footwear",
         "casual shoes"
@@ -2574,7 +2710,11 @@
       "rating": 4.23,
       "stock": 53,
       "itemCount": 1,
-      "relatedProducts":[187,185,186],
+      "relatedProducts": [
+        187,
+        185,
+        186
+      ],
       "tags": [
         "footwear",
         "women's shoes"
@@ -2639,7 +2779,11 @@
       "rating": 4.13,
       "stock": 80,
       "itemCount": 1,
-      "relatedProducts":[186,187,188],
+      "relatedProducts": [
+        186,
+        187,
+        188
+      ],
       "tags": [
         "footwear",
         "slippers"
@@ -2704,7 +2848,11 @@
       "rating": 4.06,
       "stock": 99,
       "itemCount": 1,
-      "relatedProducts":[189,187,188],
+      "relatedProducts": [
+        189,
+        187,
+        188
+      ],
       "tags": [
         "footwear",
         "heel shoes"
@@ -2769,7 +2917,11 @@
       "rating": 4.82,
       "stock": 99,
       "itemCount": 1,
-      "relatedProducts":[189,185,188],
+      "relatedProducts": [
+        189,
+        185,
+        188
+      ],
       "tags": [
         "footwear",
         "women's shoes"
@@ -2834,7 +2986,11 @@
       "rating": 3.01,
       "stock": 36,
       "itemCount": 1,
-      "relatedProducts":[189,185,186],
+      "relatedProducts": [
+        189,
+        185,
+        186
+      ],
       "tags": [
         "footwear",
         "casual shoes"
@@ -2899,7 +3055,11 @@
       "rating": 4.23,
       "stock": 53,
       "itemCount": 1,
-      "relatedProducts":[187,185,186],
+      "relatedProducts": [
+        187,
+        185,
+        186
+      ],
       "tags": [
         "footwear",
         "women's shoes"
@@ -2966,7 +3126,11 @@
       "rating": 3.57,
       "stock": 37,
       "itemCount": 1,
-      "relatedProducts":[163,164,165],
+      "relatedProducts": [
+        163,
+        164,
+        165
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -3030,7 +3194,11 @@
       "rating": 2.67,
       "stock": 20,
       "itemCount": 1,
-      "relatedProducts":[166,164,165],
+      "relatedProducts": [
+        166,
+        164,
+        165
+      ],
       "tags": [
         "clothing",
         "girls' dresses"
@@ -3094,7 +3262,11 @@
       "rating": 3.49,
       "stock": 81,
       "itemCount": 1,
-      "relatedProducts":[166,162,165],
+      "relatedProducts": [
+        166,
+        162,
+        165
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -3158,7 +3330,11 @@
       "rating": 4.63,
       "stock": 19,
       "itemCount": 1,
-      "relatedProducts":[166,162,163],
+      "relatedProducts": [
+        166,
+        162,
+        163
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -3222,7 +3398,11 @@
       "rating": 2.82,
       "stock": 100,
       "itemCount": 1,
-      "relatedProducts":[162,164,163],
+      "relatedProducts": [
+        162,
+        164,
+        163
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -3286,7 +3466,11 @@
       "rating": 3.57,
       "stock": 37,
       "itemCount": 1,
-      "relatedProducts":[163,164,165],
+      "relatedProducts": [
+        163,
+        164,
+        165
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -3350,7 +3534,11 @@
       "rating": 2.67,
       "stock": 20,
       "itemCount": 1,
-      "relatedProducts":[166,164,165],
+      "relatedProducts": [
+        166,
+        164,
+        165
+      ],
       "tags": [
         "clothing",
         "girls' dresses"
@@ -3414,7 +3602,11 @@
       "rating": 3.49,
       "stock": 81,
       "itemCount": 1,
-      "relatedProducts":[166,162,165],
+      "relatedProducts": [
+        166,
+        162,
+        165
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -3478,7 +3670,11 @@
       "rating": 4.63,
       "stock": 19,
       "itemCount": 1,
-      "relatedProducts":[166,162,163],
+      "relatedProducts": [
+        166,
+        162,
+        163
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -3542,7 +3738,11 @@
       "rating": 2.82,
       "stock": 100,
       "itemCount": 1,
-      "relatedProducts":[162,164,163],
+      "relatedProducts": [
+        162,
+        164,
+        163
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -3608,7 +3808,11 @@
       "rating": 4.19,
       "stock": 44,
       "itemCount": 1,
-      "relatedProducts":[84,85,86],
+      "relatedProducts": [
+        84,
+        85,
+        86
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -3673,7 +3877,11 @@
       "rating": 4.95,
       "stock": 64,
       "itemCount": 1,
-      "relatedProducts":[85,86,87],
+      "relatedProducts": [
+        85,
+        86,
+        87
+      ],
       "tags": [
         "clothing",
         "men's t-shirts"
@@ -3738,7 +3946,11 @@
       "rating": 3.66,
       "stock": 65,
       "itemCount": 1,
-      "relatedProducts":[86,87,83],
+      "relatedProducts": [
+        86,
+        87,
+        83
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -3803,7 +4015,11 @@
       "rating": 4.62,
       "stock": 20,
       "itemCount": 1,
-      "relatedProducts":[87,83,84],
+      "relatedProducts": [
+        87,
+        83,
+        84
+      ],
       "tags": [
         "clothing",
         "men's shirts"
@@ -3868,7 +4084,11 @@
       "rating": 4.77,
       "stock": 59,
       "itemCount": 1,
-      "relatedProducts":[178,179,180],
+      "relatedProducts": [
+        178,
+        179,
+        180
+      ],
       "tags": [
         "clothing",
         "gowns"
@@ -3932,7 +4152,11 @@
       "rating": 2.52,
       "stock": 59,
       "itemCount": 1,
-      "relatedProducts":[179,180,181],
+      "relatedProducts": [
+        179,
+        180,
+        181
+      ],
       "tags": [
         "clothing",
         "corsets",
@@ -3997,7 +4221,11 @@
       "rating": 3,
       "stock": 67,
       "itemCount": 1,
-      "relatedProducts":[180,181,177],
+      "relatedProducts": [
+        180,
+        181,
+        177
+      ],
       "tags": [
         "clothing",
         "corsets",
@@ -4062,7 +4290,11 @@
       "rating": 3.57,
       "stock": 37,
       "itemCount": 1,
-      "relatedProducts":[163,164,165],
+      "relatedProducts": [
+        163,
+        164,
+        165
+      ],
       "tags": [
         "clothing",
         "dresses"
@@ -4126,7 +4358,11 @@
       "rating": 2.67,
       "stock": 20,
       "itemCount": 1,
-      "relatedProducts":[166,164,165],
+      "relatedProducts": [
+        166,
+        164,
+        165
+      ],
       "tags": [
         "clothing",
         "girls' dresses"

@@ -3,6 +3,10 @@ nav{
     z-index: 100;
 }
 
+.navbar{
+    padding: 10px 30px;
+}
+
 .navbar-brand{
     font-family: "Cinzel Decorative", serif;
     font-weight: 700;

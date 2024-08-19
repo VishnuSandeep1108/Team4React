@@ -19,8 +19,13 @@
     margin: 0 auto;
 }
 
+.subscribe-form-container > h3{
+    font-weight: bold;
+}
+
 .subscribe-form-container > h3, .subscribe-form-container > p{
     margin: 0 auto;
+    font-size: 2em;
 }
 
 .subscribe-form-container > p{

@@ -32,6 +32,8 @@ function App() {
               <Route path='/women' element={<Womens />}></Route>
               <Route path='/kids' element={<Kids />}></Route>
               <Route path='/footwear' element={<Footwear />}></Route>
+              <Route path='/cart' element={<Cart /> }></Route>
+              <Route path='/address' element={<Address /> }></Route>
             </Routes>
           </div>
       </ProductIdContext.Provider>

@@ -17,12 +17,13 @@
 
 .shoes-banner-left > h1{
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 3.5em;
 }
 
 .shoes-banner-left p{
     margin: 0 auto;
     margin-bottom: 20px;
+    font-size: 2em;
 }
 
 .shoes-banner-right{

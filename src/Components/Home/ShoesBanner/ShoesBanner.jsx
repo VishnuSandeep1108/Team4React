@@ -24,7 +24,7 @@ function ShoesBanner() {
 
         <p>Walk the Walk with Timeless Elegance!</p>
       
-        <Link to={"/footwear"} className={styles[`shoes-banner-button`]}>
+        <Link to={"/footwear"} style={{fontSize:"2em"}} className={styles[`shoes-banner-button`]}>
           <span className={styles[`top-border`]}></span>
           <span>Shop Now!</span>
           <span className={styles[`bottom-border`]}></span>

@@ -1,7 +1,8 @@
 .top-sellers{
-    margin-top: 100vh;
+    margin-top: 99vh;
     padding: 50px;
-    background-color: rgba(0, 0, 0, 0.15)
+    background-color: rgba(0, 0, 0, 0.15);
+    font-size: 1.2em;
 }
 
 .top-sellers > h1{
@@ -156,6 +157,10 @@
     transform: scale(1.15);
 }
 
+.top-seller-details{
+    font-size: 1.1em;
+}
+
 .top-seller-details h3:nth-child(1){
     font-size: 150%;
     margin: 0 auto;
@@ -166,9 +171,9 @@
     margin: 0 auto;
 }
 
-.top-sellers-carousel-left-arrow,.top-sellers-carousel-right-arrow{
-    font-size: 200%;
-}
+/* .top-sellers-carousel-left-arrow,.top-sellers-carousel-right-arrow{
+    font-size: 2000px;
+} */
 
 .top-sellers-carousel-left-arrow{
     position: absolute;

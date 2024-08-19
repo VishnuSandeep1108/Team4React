@@ -130,7 +130,7 @@ function TopSellers() {
                 )
             })}
 
-            <FaArrowLeft className={styles[`top-sellers-carousel-left-arrow`]} onClick={()=>{
+            <FaArrowLeft style={{fontSize: "3.5em"}} className={styles[`top-sellers-carousel-left-arrow`]} onClick={()=>{
               setStartIndex((prevValue)=>{
                 if(prevValue>=4)
                   return (startIndex-4);
@@ -138,7 +138,7 @@ function TopSellers() {
                   return 0;
               });
             }}/>
-            <FaArrowRight className={styles[`top-sellers-carousel-right-arrow`]} onClick={()=>{
+            <FaArrowRight style={{fontSize: "3.5em"}} className={styles[`top-sellers-carousel-right-arrow`]} onClick={()=>{
               setStartIndex((prevValue)=>{
                 if(prevValue<topSellers.length-4)
                   return (startIndex+4);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import axios from 'axios';
 
-import './Cart.css';
+import styles from './Cart.module.css';
 
 import a from './empty-cart.gif'
 
@@ -22,7 +22,7 @@ function Cart() {
 
     useEffect(
         ()=>{
-            axios.get(`http://localhost:3000/users/?username=${username}`).then((user)=>{
+            axios.get(`http://localhost:8000/users/?username=${username}`).then((user)=>{
                 setCurrentUser(user.data[0]);
                 setCart(user.data[0].cart);       
                 totalPriceCalculator();
@@ -73,7 +73,7 @@ function Cart() {
 
         setCurrentUser(temp);
         setCart(temp.cart);
-        axios.put(`http://localhost:3000/users/${userID}`,temp).then(()=>{
+        axios.put(`http://localhost:8000/users/${userID}`,temp).then(()=>{
             console.log("Updated!");      
         })
         applyCode(totalPrice);
@@ -92,7 +92,7 @@ function Cart() {
 
         setCurrentUser(temp);
         setCart(temp.cart);
-        axios.put(`http://localhost:3000/users/${userID}`,temp).then(()=>{
+        axios.put(`http://localhost:8000/users/${userID}`,temp).then(()=>{
             console.log("Updated!");      
         })
         applyCode(totalPrice);
@@ -109,7 +109,7 @@ function Cart() {
             }
             setCurrentUser(temp)
             setCart(temp.cart)
-            axios.put(`http://localhost:3000/users/${userID}`,temp).then(()=>{
+            axios.put(`http://localhost:8000/users/${userID}`,temp).then(()=>{
                 console.log("Updated!");      
             })
         })
@@ -132,7 +132,7 @@ function Cart() {
                 }
                 else
                 {
-                    alert("Invalid Coupon Code!")
+                    // alert("Invalid Coupon Code!")
                 }
         
         // }
@@ -152,22 +152,24 @@ function Cart() {
         
     } 
     return (    
-    <div className='content-wrapper'>
-        <div className='wrapper'>
-            <div className='project'>
-                <div className='left-bar'>
+    <div className={styles[`content-wrapper`]}>
+        <div className={styles[`wrapper`]}>
+            <h1>CART</h1>
+            <div className={styles[`project`]}>
+                <div className={styles[`left-bar`]}>
 
-                {cart && cart.length>0 ? cart.map((cartItem,index)=>{            
+                {cart && cart.length>0 ? (
+                    cart.map((cartItem,index)=>{            
             return (
-                <div className='shop'>
-                    <div className='box' key={cartItem.id}> 
-                    <p onClick={()=>removeItem(cartItem,index)} className="btn-area" >
+                <div className={styles[`shop`]}>
+                    <div className={styles[`box`]} key={cartItem.id}> 
+                    <p onClick={()=>removeItem(cartItem,index)} className={styles[`btn-area`]} >
                             <i className="fa fa-close" style={{fontSize:'18px'}}></i>
-                            <span className="btn2" onClick={()=>removeItem(cartItem,index)}></span>
+                            <span className={styles[`btn2`]} onClick={()=>removeItem(cartItem,index)}></span>
                         </p>
                     <img src={cartItem.images[0]} />
-                    <div className='content'>
-                            <span><h4>{cartItem.title}</h4></span><span><h4>Rs. {cartItem.price}</h4></span> <span><h4><span className='quantityBtn' onClick={()=>{countDecrease(cartItem,index)}}> - </span> &nbsp;<span>{cartItem.itemCount}</span> &nbsp;<span className='quantityBtn' onClick={()=>{countIncrease(cartItem)}}> + </span></h4></span>
+                    <div className={styles[`content`]}>
+                            <span><h4>{cartItem.title}</h4></span><span><h4>Rs. {cartItem.price}</h4></span> <span><h4><span className={styles[`quantityBtn`]} onClick={()=>{countDecrease(cartItem,index)}}> - </span> &nbsp;<span>{cartItem.itemCount}</span> &nbsp;<span className='quantityBtn' onClick={()=>{countIncrease(cartItem)}}> + </span></h4></span>
 
                    
                     </div>    
@@ -176,26 +178,26 @@ function Cart() {
                 
                
             )
-            }):<div className='shop'><img className='empty-cart' src={a}/> </div>
+            })):<div className={styles[`shop`]}><img className={styles[`empty-cart`]} src={a}/> </div>
          }
          
         </div>
                 
-        <div className='bar'>
-        <div className='right-bar'>
+        <div className={styles[`bar`]}>
+        <div className={styles[`right-bar`]}>
             <h3>Coupons</h3>
 
         <input type="text" onChange={onChangeHandler} placeholder='Enter Coupon Code'></input><br/>
             {/* <a onClick={()=>applyCode(totalPrice)}><i className='fas fa-tag'></i>Apply</a></span> */}
-            <a className='top-sellers-categories' onClick={()=>applyCode(totalPrice)}>
-              <span className='top-border'></span>
+            <a className={styles[`top-sellers-categories`]} onClick={()=>applyCode(totalPrice)}>
+              <span className={styles[`top-border`]}></span>
               <i className='fa fa-tag'></i>
               <span>Apply Code</span>
-              <span className='bottom-border'></span>
+              <span className={styles[`bottom-border`]}></span>
             </a>
 
         </div>    
-        <div className='right-bar'>
+        <div className={styles[`right-bar`]}>
         <h3>Price Details</h3>
         <hr></hr>
         <br/>
@@ -204,11 +206,11 @@ function Cart() {
         <p>Discount : Rs. {discount.toFixed(2)} /-</p>
         <p>Total    : Rs. {cartTotal.toFixed(2)} /-</p>
         {/* <a><i className='fa fa-shopping-cart'></i>Place Order</a> */}
-        <a className='top-sellers-categories'>
-              <span className='top-border'></span>
+        <a className={styles[`top-sellers-categories`]}>
+              <span className={styles[`top-border`]}></span>
               <i className='fa fa-shopping-cart'></i>
               <span>Place Order</span>
-              <span className='bottom-border'></span>
+              <span className={styles[`bottom-border`]}></span>
             </a>
         </div>
         </div>
