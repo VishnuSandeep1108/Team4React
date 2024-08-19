@@ -1,0 +1,103 @@
+body {
+    background-color: #fefffe;
+    font-family: "Inter", sans-serif;
+}
+
+#payment-header {
+    padding: 3% 15%;
+    text-align: center;
+}
+
+label {
+    position: relative;
+    bottom: 70px;
+    left: 25px;
+    font-weight: 500;
+}
+
+.dark {
+    background-color: #121313;
+    color: #fefffe;
+}
+
+.payment-box {
+    margin: 50px 50px;
+    border: 5px solid;
+    border-color: #121313;
+    border-radius: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
+.companies {
+    border-radius: 5px;
+    display: inline-block;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 3px solid grey;
+    cursor: pointer;
+    margin: 12px 25px 12px 0px;
+}
+
+.form-card input:focus {
+    -moz-box-shadow: 0px 0px 0px 1.5px grey !important;
+    -webkit-box-shadow: 0px 0px 0px 1.5px grey !important;
+    box-shadow: 0px 0px 0px 1.5px grey !important;
+    font-weight: 500;
+    border: 1.5px solid grey;
+    outline-width: 0;
+}
+
+.text-danger {
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+    font-size: 14px;
+}
+
+.col-12 {
+    margin-bottom: 15px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 2px;
+    margin: 0;
+    height: 80px;
+    border: red;
+    text-align: left;
+}
+
+.input-box input {
+    position: relative;
+    height: 80px;
+    border-radius: 6px;
+    padding-top: 30px;
+    padding-left: 25px;
+    width: 100%;
+}
+
+.pay {
+    display: flex;
+    justify-content: center;
+}
+.pay-button {
+    background-color: black;
+    height: 60px;
+    width: 100px;
+    color: #fefffe;
+    font-weight: bold;
+    transition: all 0.5s linear;
+    margin-bottom: 0.75rem;
+    border: 2px solid black;
+}
+.pay-button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    font-weight: bold;
+}

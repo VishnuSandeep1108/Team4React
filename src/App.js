@@ -4,6 +4,10 @@ import { Link, Route, Routes } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import ProductDetails from './Components/Product-Details/Product-Details';
 import Wishlist from './Components/Wishlist/Wishlist';
+import Checkout from "./Components/Checkout/Checkout";
+import Card from "./Components/Card/Card";
+import UPI from "./Components/UPI/UPI";
+import ThankYou from "./Components/Thank-You/Thank-You";
 
 import './App.css';
 import Cart from './Components/Cart/Cart';
