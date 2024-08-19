@@ -38,6 +38,10 @@ function App() {
               <Route path='/footwear' element={<Footwear />}></Route>
               <Route path='/cart' element={<Cart /> }></Route>
               <Route path='/address' element={<Address /> }></Route>
+              <Route path='/checkout' element={<Checkout /> }></Route>
+              <Route path='/card' element={<Card /> }></Route>
+              <Route path='/upi' element={<UPI /> }></Route>
+              <Route path='/thankyou' element={<ThankYou /> }></Route>
             </Routes>
           </div>
       </ProductIdContext.Provider>
