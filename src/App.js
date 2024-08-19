@@ -25,7 +25,10 @@ function App() {
               <Route path='/' element={<Home />}></Route>
               <Route path='/product-details' element={<ProductDetails />}></Route>
               <Route path='/wishlist' element={<Wishlist />}></Route>
-              <Route path='/men'></Route>
+              <Route path='/men' element={<Mens />}></Route>
+              <Route path='/women' element={<Womens />}></Route>
+              <Route path='/kids' element={<Kids />}></Route>
+              <Route path='/footwear' element={<Footwear />}></Route>
             </Routes>
           </div>
       </ProductIdContext.Provider>
