@@ -20,6 +20,7 @@ h3 {
     margin-top: 30px;
     margin-bottom: 20px;
     font-family: "Cinzel Decorative";
+    font-weight: bold;
 }
 .home {
     background-color: black;
@@ -49,7 +50,7 @@ button:hover {
     align-items: center;
     background-color: #fefffe;
 }
-.checkmark__circle {
+.checkmark-circle {
     stroke-dasharray: 166;
     stroke-dashoffset: 166;
     stroke-width: 2;
@@ -63,15 +64,14 @@ button:hover {
     height: 100px;
     border-radius: 50%;
     display: block;
-    stroke-width: 2;
+    stroke-width: 3;
     stroke: black;
     stroke-miterlimit: 10;
     margin: 10% auto;
-    box-shadow: inset 0px 0px 0px #d92a2b;
     animation: fill 0.4s ease-in-out 0.4s forwards,
         scale 0.3s ease-in-out 0.9s both;
 }
-.checkmark__check {
+.checkmark-check {
     transform-origin: 50% 50%;
     stroke-dasharray: 48;
     stroke-dashoffset: 48;

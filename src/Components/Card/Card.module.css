@@ -1,9 +1,4 @@
-body {
-    background-color: #fefffe;
-    font-family: "Inter", sans-serif;
-}
-
-#payment-header {
+.payment-header {
     padding: 3% 15%;
     text-align: center;
 }
@@ -60,7 +55,7 @@ label {
 }
 
 .col-12 {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .input-box {
@@ -73,7 +68,7 @@ label {
 }
 
 .input-box input {
-    position: relative;
+    position: relative; 
     height: 80px;
     border-radius: 6px;
     padding-top: 30px;
@@ -85,6 +80,7 @@ label {
     display: flex;
     justify-content: center;
 }
+
 .pay-button {
     background-color: black;
     height: 60px;
@@ -95,6 +91,7 @@ label {
     margin-bottom: 0.75rem;
     border: 2px solid black;
 }
+
 .pay-button:hover {
     background-color: white;
     color: black;

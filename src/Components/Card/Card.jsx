@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import "./Card.css";
+import styles from "./Card.module.css";
 
 function Card({ totalAmount }) {
     const form = useForm({ mode: "all" });
@@ -49,65 +49,81 @@ function Card({ totalAmount }) {
 
     return (
         <>
-            <section id="payment-header" class="dark">
-                <h1>Paying ₹{totalAmount}</h1>
+            <section
+                className={`${styles[`payment-header`]} ${styles[`dark`]}`}
+            >
+                <h1 className={styles[`big-heading`]}>Paying ₹{totalAmount}</h1>
             </section>
-            <div className="card">
-                <div className="container-fluid">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-6 col-md-8">
-                            <div className="payment-box form-card p-4">
+            <div className={`card`}>
+                <div className={`container-fluid`}>
+                    <div className={`row justify-content-center`}>
+                        <div className={`col-lg-6 col-md-8`}>
+                            <div
+                                className={`payment-box form-card p-4 ${
+                                    styles[`payment-box`]
+                                } ${styles[`form-card`]}`}
+                            >
                                 <form
                                     onSubmit={handleSubmit(onSubmit)}
                                     noValidate
                                 >
-                                    <div class="row justify-content-center mb-4">
-                                        <div class="col-sm-3 col-5">
+                                    <div
+                                        className={`row justify-content-center mb-4`}
+                                    >
+                                        <div className={`col-sm-3 col-5`}>
                                             <div
-                                                class="mx-auto"
+                                                className={`mx-auto`}
                                                 data-value="amex"
                                             >
                                                 <img
-                                                    class="fit-image companies"
+                                                    className={`${
+                                                        styles[`fit-image`]
+                                                    } ${styles[`companies`]}`}
                                                     src="/checkout-images/AmericanExpress.png"
                                                     width="105px"
                                                     height="55px"
                                                 />
                                             </div>
                                         </div>
-                                        <div class="col-sm-3 col-5">
+                                        <div className={`col-sm-3 col-5`}>
                                             <div
-                                                class="mx-auto"
+                                                className={`mx-auto`}
                                                 data-value="visa"
                                             >
                                                 <img
-                                                    class="fit-image companies"
+                                                    className={`${
+                                                        styles[`fit-image`]
+                                                    } ${styles[`companies`]}`}
                                                     src="/checkout-images/VISA.png"
                                                     width="105px"
                                                     height="55px"
                                                 />
                                             </div>
                                         </div>
-                                        <div class="col-sm-3 col-5">
+                                        <div className={`col-sm-3 col-5`}>
                                             <div
-                                                class="mx-auto"
+                                                className={`mx-auto`}
                                                 data-value="master"
                                             >
                                                 <img
-                                                    class="fit-image companies"
+                                                    className={`${
+                                                        styles[`fit-image`]
+                                                    } ${styles[`companies`]}`}
                                                     src="/checkout-images/MasterCard.png"
                                                     width="105px"
                                                     height="55px"
                                                 />
                                             </div>
                                         </div>
-                                        <div class="col-sm-3 col-5">
+                                        <div className={`col-sm-3 col-5`}>
                                             <div
-                                                class="mx-auto"
+                                                className={`mx-auto`}
                                                 data-value="rupay"
                                             >
                                                 <img
-                                                    class="fit-image companies"
+                                                    className={`${
+                                                        styles[`fit-image`]
+                                                    } ${styles[`companies`]}`}
                                                     src="/checkout-images/RuPay.png"
                                                     width="105px"
                                                     height="55px"
@@ -115,11 +131,17 @@ function Card({ totalAmount }) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="row justify-content-center">
-                                        <div className="col-12">
+                                    <div
+                                        className={`row justify-content-center`}
+                                    >
+                                        <div
+                                            className={`col-12 ${
+                                                styles[`col-12`]
+                                            }`}
+                                        >
                                             <div
-                                                style={{ borderRadius: "8px"}}
-                                                className={`input-box ${errors.name}`}
+                                                style={{ borderRadius: "8px" }}
+                                                className={styles[`input-box`]}
                                             >
                                                 <input
                                                     type="text"
@@ -138,13 +160,15 @@ function Card({ totalAmount }) {
                                                     value={name}
                                                     onChange={nameHandler}
                                                     id="name"
-                                                    className="form-control"
+                                                    className={`form-control`}
                                                     placeholder="John Smith"
                                                 />
-                                                <label htmlFor="name">
-                                                    Name
-                                                </label>
-                                                <div className="text-danger">
+                                                <label>Name</label>
+                                                <div
+                                                    className={`text-danger ${
+                                                        styles[`text-danger`]
+                                                    }`}
+                                                >
                                                     <span>
                                                         {errors.name?.message}
                                                     </span>
@@ -153,11 +177,17 @@ function Card({ totalAmount }) {
                                         </div>
                                     </div>
                                     <br />
-                                    <div className="row justify-content-center">
-                                        <div className="col-12">
+                                    <div
+                                        className={`row justify-content-center`}
+                                    >
+                                        <div
+                                            className={`col-12 ${
+                                                styles[`col-12`]
+                                            }`}
+                                        >
                                             <div
                                                 style={{ borderRadius: "8px" }}
-                                                className="input-box"
+                                                className={styles[`input-box`]}
                                             >
                                                 <input
                                                     type="text"
@@ -175,11 +205,15 @@ function Card({ totalAmount }) {
                                                     })}
                                                     value={cardNumber}
                                                     onChange={cardNumberHandler}
-                                                    className="form-control"
+                                                    className={`form-control`}
                                                     placeholder="0000 0000 0000 0000"
                                                 />
                                                 <label>Card Number</label>
-                                                <div className="text-danger">
+                                                <div
+                                                    className={`text-danger ${
+                                                        styles[`text-danger`]
+                                                    }`}
+                                                >
                                                     <span>
                                                         {
                                                             errors.cardNumber
@@ -191,15 +225,23 @@ function Card({ totalAmount }) {
                                         </div>
                                     </div>
                                     <br />
-                                    <div className="row justify-content-center">
-                                        <div className="col-12">
-                                            <div className="row">
-                                                <div className="col-6">
+                                    <div
+                                        className={`row justify-content-center`}
+                                    >
+                                        <div
+                                            className={`col-12 ${
+                                                styles[`col-12`]
+                                            }`}
+                                        >
+                                            <div className={`row`}>
+                                                <div className={`col-6`}>
                                                     <div
                                                         style={{
                                                             borderRadius: "8px",
                                                         }}
-                                                        className="input-box"
+                                                        className={
+                                                            styles[`input-box`]
+                                                        }
                                                     >
                                                         <input
                                                             type="text"
@@ -222,13 +264,19 @@ function Card({ totalAmount }) {
                                                             onChange={
                                                                 expiryDateHandler
                                                             }
-                                                            className="form-control"
+                                                            className={`form-control`}
                                                             placeholder="MM/YY"
                                                         />
                                                         <label>
                                                             Expiry Date
                                                         </label>
-                                                        <div className="text-danger">
+                                                        <div
+                                                            className={`text-danger ${
+                                                                styles[
+                                                                    `text-danger`
+                                                                ]
+                                                            }`}
+                                                        >
                                                             <span>
                                                                 {
                                                                     errors
@@ -239,12 +287,14 @@ function Card({ totalAmount }) {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="col-6">
+                                                <div className={`col-6`}>
                                                     <div
                                                         style={{
                                                             borderRadius: "8px",
                                                         }}
-                                                        className="input-box"
+                                                        className={
+                                                            styles[`input-box`]
+                                                        }
                                                     >
                                                         <input
                                                             type="password"
@@ -277,11 +327,17 @@ function Card({ totalAmount }) {
                                                             onChange={
                                                                 cvvHandler
                                                             }
-                                                            className="form-control"
+                                                            className={`form-control`}
                                                             placeholder="&#9679;&#9679;&#9679;"
                                                         />
                                                         <label>CVV</label>
-                                                        <div className="text-danger">
+                                                        <div
+                                                            className={`text-danger ${
+                                                                styles[
+                                                                    `text-danger`
+                                                                ]
+                                                            }`}
+                                                        >
                                                             <span>
                                                                 {
                                                                     errors.cvv
@@ -295,11 +351,15 @@ function Card({ totalAmount }) {
                                         </div>
                                     </div>
                                     <br />
-                                    <div className="row justify-content-center">
-                                        <div className="col-md-12">
-                                            <div className="pay">
+                                    <div
+                                        className={`row justify-content-center`}
+                                    >
+                                        <div className={`col-md-12`}>
+                                            <div className={styles[`pay`]}>
                                                 <button
-                                                    className="btn btn-lg btn-block pay-button"
+                                                    className={`btn btn-lg btn-block ${
+                                                        styles[`pay-button`]
+                                                    }`}
                                                     type="submit"
                                                 >
                                                     <strong>Pay</strong>

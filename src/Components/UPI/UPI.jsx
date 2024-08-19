@@ -1,10 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import "./UPI.css";
+import styles from "./UPI.module.css";
 
 function UPI({ totalAmount }) {
-    const form = useForm({mode: "all"});
+    const form = useForm({ mode: "all" });
     const navigate = useNavigate();
     const { register, control, handleSubmit, formState } = form;
     const { errors } = formState;
@@ -15,65 +15,81 @@ function UPI({ totalAmount }) {
 
     return (
         <>
-            <section id="payment-header" class="dark">
-                <h1>Paying ₹{totalAmount}</h1>
+            <section
+                className={`${styles[`payment-header`]} ${styles[`dark`]}`}
+            >
+                <h1 className={styles[`big-heading`]}>Paying ₹{totalAmount}</h1>
             </section>
-            <div className="card">
-                <div className="container-fluid">
-                    <div className="row justify-content-center">
-                        <div className="col-lg-6 col-md-8">
-                            <div className="payment-box form-card p-4">
+            <div className={`card`}>
+                <div className={`container-fluid`}>
+                    <div className={`row justify-content-center`}>
+                        <div className={`col-lg-6 col-md-8`}>
+                            <div
+                                className={`payment-box form-card p-4 ${
+                                    styles[`payment-box`]
+                                } ${styles[`form-card`]}`}
+                            >
                                 <form
                                     onSubmit={handleSubmit(onSubmit)}
                                     noValidate
                                 >
-                                    <div class="row justify-content-center mb-4">
-                                        <div class="col-sm-3 col-5">
+                                    <div
+                                        className={`row justify-content-center mb-4`}
+                                    >
+                                        <div className={`col-sm-3 col-5`}>
                                             <div
-                                                class="mx-auto"
+                                                className={`mx-auto`}
                                                 data-value="amex"
                                             >
                                                 <img
-                                                    class="fit-image companies"
+                                                    className={`${
+                                                        styles[`fit-image`]
+                                                    } ${styles[`companies`]}`}
                                                     src="/checkout-images/GPay.png"
                                                     width="105px"
                                                     height="55px"
                                                 />
                                             </div>
                                         </div>
-                                        <div class="col-sm-3 col-5">
+                                        <div className={`col-sm-3 col-5`}>
                                             <div
-                                                class="mx-auto"
+                                                className={`mx-auto`}
                                                 data-value="visa"
                                             >
                                                 <img
-                                                    class="fit-image companies"
+                                                    className={`${
+                                                        styles[`fit-image`]
+                                                    } ${styles[`companies`]}`}
                                                     src="/checkout-images/PhonePe.png"
                                                     width="105px"
                                                     height="55px"
                                                 />
                                             </div>
                                         </div>
-                                        <div class="col-sm-3 col-5">
+                                        <div className={`col-sm-3 col-5`}>
                                             <div
-                                                class="mx-auto"
+                                                className={`mx-auto`}
                                                 data-value="master"
                                             >
                                                 <img
-                                                    class="fit-image companies"
+                                                    className={`${
+                                                        styles[`fit-image`]
+                                                    } ${styles[`companies`]}`}
                                                     src="/checkout-images/Paytm.png"
                                                     width="105px"
                                                     height="55px"
                                                 />
                                             </div>
                                         </div>
-                                        <div class="col-sm-3 col-5">
+                                        <div className={`col-sm-3 col-5`}>
                                             <div
-                                                class="mx-auto"
+                                                className={`mx-auto`}
                                                 data-value="rupay"
                                             >
                                                 <img
-                                                    class="fit-image companies"
+                                                    className={`${
+                                                        styles[`fit-image`]
+                                                    } ${styles[`companies`]}`}
                                                     src="/checkout-images/AmazonPay.png"
                                                     width="105px"
                                                     height="55px"
@@ -81,11 +97,15 @@ function UPI({ totalAmount }) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="row justify-content-center">
-                                        <div className="col-12">
+                                    <div
+                                        className={`row justify-content-center`}
+                                    >
+                                        <div
+                                            className={`col-12`}
+                                        >
                                             <div
                                                 style={{ borderRadius: "8px" }}
-                                                className="input-box"
+                                                className={styles[`input-box`]}
                                             >
                                                 <input
                                                     type="text"
@@ -101,16 +121,17 @@ function UPI({ totalAmount }) {
                                                                 "UPI ID is invalid!",
                                                         },
                                                     })}
-                                                    className="form-control"
+                                                    className={`form-control`}
                                                     placeholder="johnsmith@bank"
                                                 />
                                                 <label>UPI ID</label>
-                                                <div className="text-danger">
+                                                <div
+                                                    className={`text-danger ${
+                                                        styles[`text-danger`]
+                                                    }`}
+                                                >
                                                     <span>
-                                                        {
-                                                            errors.upiId
-                                                                ?.message
-                                                        }
+                                                        {errors.upiId?.message}
                                                     </span>
                                                 </div>
                                             </div>
@@ -118,11 +139,15 @@ function UPI({ totalAmount }) {
                                     </div>
                                     <br />
                                     <br />
-                                    <div className="row justify-content-center">
-                                        <div className="col-md-12">
-                                            <div className="pay">
+                                    <div
+                                        className={`row justify-content-center`}
+                                    >
+                                        <div className={`col-md-12`}>
+                                            <div className={styles[`pay`]}>
                                                 <button
-                                                    className="btn btn-lg btn-block pay-button"
+                                                    className={`btn btn-lg btn-block ${
+                                                        styles[`pay-button`]
+                                                    }`}
                                                     type="submit"
                                                 >
                                                     <strong>Pay</strong>

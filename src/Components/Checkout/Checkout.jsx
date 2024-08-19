@@ -1,23 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./Checkout.css";
+import styles from "./Checkout.module.css";
 
 function Checkout({ totalAmount }) {
     const navigate = useNavigate();
 
     return (
         <>
-            <section id="payment-header" class="dark">
-                <h1>Paying ₹{ totalAmount }</h1>
+            <section className={`${styles[`payment-header`]} ${styles[`dark`]}`}>
+                <h1 className={styles[`big-heading`]}>Paying ₹{totalAmount}</h1>
             </section>
-            <div className="pad">
-            <h3>Select Mode of Payment</h3>
+            <div className={styles[`pad`]}>
+                <h3 className={styles[`small-heading`]}>Select Mode of Payment</h3>
             </div>
-            <div class="buttons">
-                <button class="dark" onClick={() => navigate('/card')}>
+            <div className={styles[`buttons`]}>
+                <button className={styles[`dark`]} onClick={() => navigate("/card")}>
                     CARD
                 </button>
-                <button class="dark" onClick={() => navigate('/upi')}>
+                <button className={styles[`dark`]} onClick={() => navigate("/upi")}>
                     UPI
                 </button>
             </div>
