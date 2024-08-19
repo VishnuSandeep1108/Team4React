@@ -198,6 +198,74 @@
             "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Baseball%20Cleats/4.png"
           ],
           "thumbnail": "https://cdn.dummyjson.com/products/images/mens-shoes/Nike%20Baseball%20Cleats/thumbnail.png"
+        },
+        {
+          "id": "165",
+          "title": "Short Frock",
+          "description": "The Short Frock is a playful and trendy dress with a shorter length. Ideal for casual outings or special occasions, it combines style and comfort for a fashionable look.",
+          "category": "tops",
+          "price": 24.99,
+          "discountPercentage": 9.47,
+          "rating": 4.63,
+          "stock": 19,
+          "itemCount": 1,
+          "relatedProducts": [
+            166,
+            162,
+            163
+          ],
+          "tags": [
+            "clothing",
+            "dresses"
+          ],
+          "sku": "4VA2AFL0",
+          "weight": 8,
+          "dimensions": {
+            "width": 24.35,
+            "height": 8.49,
+            "depth": 5.89
+          },
+          "warrantyInformation": "No warranty",
+          "shippingInformation": "Ships in 1-2 business days",
+          "availabilityStatus": "In Stock",
+          "reviews": [
+            {
+              "rating": 1,
+              "comment": "Very unhappy with my purchase!",
+              "date": "2024-05-23T08:56:21.626Z",
+              "reviewerName": "Asher Scott",
+              "reviewerEmail": "asher.scott@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Great product!",
+              "date": "2024-05-23T08:56:21.626Z",
+              "reviewerName": "Penelope Harper",
+              "reviewerEmail": "penelope.harper@x.dummyjson.com"
+            },
+            {
+              "rating": 4,
+              "comment": "Very happy with my purchase!",
+              "date": "2024-05-23T08:56:21.626Z",
+              "reviewerName": "Nathan Reed",
+              "reviewerEmail": "nathan.reed@x.dummyjson.com"
+            }
+          ],
+          "returnPolicy": "60 days return policy",
+          "minimumOrderQuantity": 19,
+          "meta": {
+            "createdAt": "2024-05-23T08:56:21.626Z",
+            "updatedAt": "2024-05-23T08:56:21.626Z",
+            "barcode": "5470465127276",
+            "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
+          },
+          "images": [
+            "https://cdn.dummyjson.com/products/images/tops/Short%20Frock/1.png",
+            "https://cdn.dummyjson.com/products/images/tops/Short%20Frock/2.png",
+            "https://cdn.dummyjson.com/products/images/tops/Short%20Frock/3.png",
+            "https://cdn.dummyjson.com/products/images/tops/Short%20Frock/4.png"
+          ],
+          "thumbnail": "https://cdn.dummyjson.com/products/images/tops/Short%20Frock/thumbnail.png"
         }
       ]
     },

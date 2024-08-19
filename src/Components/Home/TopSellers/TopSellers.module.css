@@ -10,6 +10,7 @@
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    color: black;
 }
 
 .edgtf-separator{
@@ -77,6 +78,11 @@
     font-style: normal;
     border-left: 4px solid black;
     border-right: 4px solid black;
+}
+
+.top-sellers-categories>span:nth-child(2):hover
+{
+    text-decoration: none;
 }
 
 .top-border{
@@ -158,15 +164,17 @@
 }
 
 .top-seller-details{
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .top-seller-details h3:nth-child(1){
+    font-family: cinzel;
     font-size: 150%;
     margin: 0 auto;
 }
 
 .top-seller-details h3:nth-child(2){
+    font-family:cinzel;
     font-size: 100%;
     margin: 0 auto;
 }

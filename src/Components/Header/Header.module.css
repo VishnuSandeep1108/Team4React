@@ -5,7 +5,7 @@ body {
 
 .navbar {
     background-color: #fff;
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,7 +18,9 @@ body {
     font-family: "Cinzel Decorative", serif;
     font-weight: 900;
     font-style: normal;
-    font-size: 180%;
+    font-size: 2.5em;
+    padding-top: 15px;
+    margin-right: 10vw;
 }
 
 .navbar-toggler {
@@ -56,11 +58,13 @@ body {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    margin-right: 10px;
+    margin-right: -1.8vw;
     border-bottom: 5px solid transparent;
     transition: border-bottom 0.5s ease-in;
     color: black;
     padding:10px 15px;
+    font-size: 1.6em;
+    font-weight: bold;
 }
 
 .nav-link:hover {

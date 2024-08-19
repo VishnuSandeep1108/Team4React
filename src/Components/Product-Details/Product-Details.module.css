@@ -54,16 +54,21 @@
     width: 100%;
     box-sizing: border-box;
     /* padding: 30px 50px 50px 0; */
-    padding: 5vh 7vh 7vh 0;
+    padding: 0vh 7vh 7vh 0;
     /* background-color: blue; */
 }
 
 .product-details > h1,h3,p{
+    color: black;
+    text-align: left;
     width: fit-content;
 }
 
 .product-details > h1{
     font-size: 6vh;
+    font-family: CINZEL;
+    padding-left: 0;
+    margin-left: 0;
 }
 
 .product-details > h3{
@@ -111,6 +116,9 @@
 }
 
 .product-reviews > h3{
+    font-family: cinzel;
+    font-weight: bold;
+    font-size: 2.5em;
     margin-bottom: 3vh;
 }
 
@@ -186,6 +194,9 @@
 }
 
 .related-products-container > h3{
+    font-family: cinzel;
+    font-weight: bold;
+    font-size: 2.5em;
     margin-bottom: 3vh;
 }
 
@@ -245,6 +256,7 @@
 /* BUTTONS */
 
 .product-details-button{
+    text-decoration: none !important;
     position: relative;
     display: block;
     width: 80%;

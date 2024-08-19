@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Mens.css';
+import styles from "./Mens.module.css";
 import axios from 'axios';
 
 function Mens() {
@@ -10,7 +10,7 @@ function Mens() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1000)
+    }, 2000)
     axios.get('http://localhost:8000/mens').then((res) => {
       setMens(res.data);
     });
@@ -76,15 +76,15 @@ function Mens() {
   };
 
   return (
-    <div className="product-display">
+    <div className={styles[`product-display`]}>
       {loading && (
-        <div className="loading-spinner">
-          <div class="page-content page-container" id="page-content">
-            <div class="padding">
-              <div class="row container d-flex justify-content-center">
-                <div class="col-md-4 col-sm-6 grid-margin stretch-card">
-                  <div class="loader-demo-box">
-                    <div class="jumping-dots-loader">
+        <div className={styles[`loading-spinner`]}>
+          <div className={`${styles[`page-content`]} ${styles[`page-container`]}`} id="page-content">
+            <div className={styles[`padding`]}>
+              <div class={`row container d-flex justify-content-center`}>
+                <div class={`col-md-4 col-sm-6 grid-margin stretch-card`}>
+                  <div class={styles[`loader-demo-box`]}>
+                    <div class={styles[`jumping-dots-loader`]}>
                       <span></span>
                       <span></span>
                       <span></span>
@@ -97,35 +97,36 @@ function Mens() {
         </div>
       )}
       <h1>Men's Collection</h1>
-      <div className="product-display-container">
+      <div className={styles[`product-display-container`]}>
         {mens.map(product => (
-          <div className="card" key={product.id}>
+          <div className={`card ${styles[`card`]}`} key={product.id}>
             <img
-              className="card-img-top"
+              className={`card-img-top`}
               src={product.images[0]}
               alt={product.title}
             />
-            <div className="card-body productDetails">
-              <h4 className="card-title">{product.title}</h4>
-              <p className="card-text">{product.brand}</p>
-              <p className="card-text">
-                Rs. {product.price} <span className="strikedPrice"><del>Rs. 1499</del></span> (68% off)
+            <div className={`card-body ${styles[`productDetails`]} ${styles[`card-body`]}`}>
+              <h4 className={`card-title ${styles[`cardTitle`]} ${styles[`card-title`]}`}>{product.title}</h4>
+              <p className={`card-text ${styles[`cardText`]} ${styles[`card-text`]}`}>{product.brand}</p>
+              <p className={`card-text ${styles[`cardText`]} ${styles[`card-text`]}`}>
+                Rs. {product.price} <span className={styles[`strikedPrice`]}><del>Rs. 1499</del></span> (68% off)
               </p>
             </div>
-            <div className="card-body wishlist">
-              <a className='top-sellers-categories' onClick={(event) => { onAddWishlist(event, product) }}>
-                <span className='top-border'></span>
+            <div className={`card-body ${styles[`wishlist`]} ${styles[`card-body`]}`}>
+              <a className={styles[`top-sellers-categories`]} onClick={(event) => { onAddWishlist(event, product) }}>
+                <span className={styles[`top-border`]}></span>
                 <span><i className="fa-solid fa-heart"></i> Wishlist</span>
-                <span className='bottom-border'></span>
+                <span className={styles[`bottom-border`]}></span>
               </a>
-              <a className='top-sellers-categories' onClick={() => { onAddCart(product) }}>
-                <span className='top-border'></span>
+
+              <a className={styles[`top-sellers-categories`]} onClick={(event) => { onAddCart(product) }}>
+                <span className={styles[`top-border`]}></span>
                 <span><i className="fa-solid fa-cart-shopping"></i> Add to Cart</span>
-                <span className='bottom-border'></span>
+                <span className={styles[`bottom-border`]}></span>
               </a>
-              <p className="card-text">Size: S</p>
-              <p className="card-text">
-                Rs. {product.price} <span className="strikedPrice"><del>Rs. 1499</del></span> (68% off)
+              <p style={{fontSize: "0.9em", "margin": "0 auto"}} className={`card-text ${styles[`card-text`]}`}>Size: S</p>
+              <p style={{fontSize: "0.9em", "margin": "0 auto"}} className={`card-text ${styles[`card-text`]}`}>
+                Rs. {product.price} <span className={styles[`strikedPrice`]}><del>Rs. 1499</del></span> (68% off)
               </p>
             </div>
           </div>

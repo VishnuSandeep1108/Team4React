@@ -78,7 +78,7 @@ function Wishlist() {
 
 //     </div>
 <>
-<h1>WISHLIST</h1>
+<h1 className={styles[`heading`]}>WISHLIST</h1>
 <a className={styles[`top-sellers-categories`]} onClick={()=>categoryy('mens-shirts')}><span className={styles[`top-border`]}></span>
               <span>Mens clothing</span>
               <span className={styles[`bottom-border`]}></span></a> <a className={styles[`top-sellers-categories`]} onClick={()=>categoryy('womens-dresses')}><span className={styles[`top-border`]}></span>

@@ -161,6 +161,11 @@ img:hover {
 } */
 
 /* WISHLIST CSS */
+.heading{
+  color: black;
+  font-size: 3em;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -193,6 +198,7 @@ input[type='text'] {
   border-radius: 5px;
   /* box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   border-bottom: 5px solid gray; /* Add gray line */
+  font-size: 1.3em;
 }
 
 .box img {
