@@ -3,9 +3,9 @@ import { Link, Route, Routes } from 'react-router-dom';
 
 import Home from './Components/Home/Home';
 import ProductDetails from './Components/Product-Details/Product-Details';
+import Wishlist from './Components/Wishlist/Wishlist';
 
 import './App.css';
-import Wishlist from './Components/Wishlist/Wishlist';
 
 export const CategoryContext = createContext();
 export const ProductIdContext = createContext();
@@ -20,6 +20,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />}></Route>
               <Route path='/product-details' element={<ProductDetails />}></Route>
+              <Route path='/wishlist' element={<Wishlist />}></Route>
               <Route path='/men'></Route>
             </Routes>
           </div>

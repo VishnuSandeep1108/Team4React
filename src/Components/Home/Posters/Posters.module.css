@@ -29,6 +29,9 @@
 }
 
 .poster1-text{
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
     height: 100%;
     position: absolute;
     width: 60%;
@@ -40,6 +43,9 @@
 }
 
 .poster1-text h1{
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
     font-size: 2em;
     font-weight: bold;
     margin: 20px 0;
@@ -47,6 +53,7 @@
 
 .poster1-text p{
     font-size: 1em;
+    font-weight: bold;
 }
 
 .poster2{
@@ -71,15 +78,21 @@
     top: 0;
     text-align: left;
     padding: 20px;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .poster2-text h1{
     font-size: 1.5em;
     font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 
 .poster2-text p{
-    font-size: 1em;
+    font-weight: bold;
+    font-size: 0.8em;
 }
 
 .poster3{
@@ -104,15 +117,21 @@
     top: 0;
     text-align: left;
     padding: 20px;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .poster3-text h1{
     font-size: 1.5em;
     font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 
 .poster3-text p{
-    font-size: 1em;
+    font-weight: bold;
+    font-size: 0.8em;
 }
 
 .poster4{
@@ -136,13 +155,19 @@
     text-align: left;
     padding: 30px;
     color: black;
+    font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .poster4-text h1{
     font-size: 1.5em;
     font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 
 .poster4-text p{
-    font-size: 1em;
+    font-weight: bold;
+    font-size: 0.8em;
 }
