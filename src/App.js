@@ -5,6 +5,7 @@ import Home from './Components/Home/Home';
 import ProductDetails from './Components/Product-Details/Product-Details';
 
 import './App.css';
+import Wishlist from './Components/Wishlist/Wishlist';
 
 export const CategoryContext = createContext();
 export const ProductIdContext = createContext();
