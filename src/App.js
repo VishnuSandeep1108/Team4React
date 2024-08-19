@@ -12,7 +12,6 @@ import Wishlist from './Components/Wishlist/Wishlist';
 import './App.css';
 import Login from './Components/login/Login';
 import Cart from './Components/Cart/Cart';
-import Address from './Components/Address/Address';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 

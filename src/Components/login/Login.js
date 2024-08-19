@@ -107,7 +107,7 @@ const Login = () => {
                 {isLogin ? (
                     <form  className={`${styles[`form-content`]}${styles[`LoginForm`]}`} onSubmit={handleLoginSubmit(onLogin)} noValidate>
                         <div className={styles[`input-box`]}>
-                            <input type="text" placeholder="Username" {...loginRegister("username", {
+                            <input style={{"width":"100%","height":"10%"}} type="text" placeholder="Username" {...loginRegister("username", {
                                 required: { value: true, message: "Username is Required" },
                                 minLength: { value: 6, message: "Username must contain at least 6 characters" }
                             })} autoComplete="off" value={loginUsername} onChange={(e) => setLoginUsername(e.target.value)} />
@@ -126,7 +126,7 @@ const Login = () => {
                     </form>
                 ) : (
                     <form  className={`${styles[`form-content`]}${styles[`RegForm`]}`} onSubmit={handleSignupSubmit(handleRegister)} noValidate>
-                        <input type="text" placeholder="Username" {...signupRegister("username", {
+                        <input style={{"width":"100%","height":"10%"}} type="text" placeholder="Username" {...signupRegister("username", {
                             required: { value: true, message: "Username is Required" },
                             minLength: { value: 6, message: "Username must contain at least 6 characters" }
                         })} autoComplete="off" value={signupUsername} onChange={(e) => setSignupUsername(e.target.value)} />
