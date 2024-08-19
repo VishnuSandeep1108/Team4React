@@ -43,6 +43,7 @@ function App() {
               <Route path='/card' element={<Card /> }></Route>
               <Route path='/upi' element={<UPI /> }></Route>
               <Route path='/thankyou' element={<ThankYou /> }></Route>
+              <Route path='/auth' element={<Login />}></Route>
             </Routes>
           </div>
       </ProductIdContext.Provider>
