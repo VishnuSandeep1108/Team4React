@@ -4,11 +4,12 @@ body {
 }
 
 .navbar {
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, 0.25);
     padding: 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 0;
 }
 
 .navbar-brand {
@@ -58,18 +59,24 @@ body {
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    margin-right: -1.8vw;
+    margin-right: -2vw;
     border-bottom: 5px solid transparent;
     transition: border-bottom 0.5s ease-in;
     color: black;
     padding:10px 15px;
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: bold;
 }
 
+.nav-link:active{
+    color: black !important;
+}
+
 .nav-link:hover {
-    background-color: pink;
+    /* background-color: rgb(0, 0, 0,0.5); */
     border-radius: 4px;
+    text-decoration: none;
+    color: darkgray;
 }
 
 .nav-icon .nav-link {

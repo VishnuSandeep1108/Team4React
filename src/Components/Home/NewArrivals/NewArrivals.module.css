@@ -109,6 +109,7 @@
 }
 
 .new-arrivals-button:hover{
+    text-decoration: none;
     color: black;
     background-color: rgb(255,255,255,0.2);
 }

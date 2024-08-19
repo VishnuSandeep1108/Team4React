@@ -1,11 +1,13 @@
 .account-page {
-  min-height: 120vh;
+  /* min-height: 120vh; */
+  width: 100vw;
+  background-color: #ccc;
   /* background: url('../../../public/Login-images/top-view-black-friday-written-notepad.jpg') no-repeat center center/cover; */
   display: flex;
   justify-content: center;
   align-items: center;
  flex-direction: column;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   overflow: hidden; 
 }
 
@@ -18,6 +20,7 @@
   text-align: center;
   position: relative;
   border-radius: 8px;
+  margin: 0 auto;
 }
 
 .form-container .form-btn {
@@ -39,6 +42,12 @@
   position: relative;
   z-index: 1;
   font-size: 1.8em;
+}
+
+.toggle-label{
+  position: relative;
+  top: 10px;
+  left: 0px;
 }
 
 .input-box > input{
@@ -94,6 +103,7 @@ form input {
 
 form .btn {
   width: 100%;
+  height: 10vh;
   cursor: pointer;
   border: none;
   margin: 10px 0;
@@ -178,20 +188,21 @@ input.ng-touched.ng-valid{
   background-position: center;
   background-attachment: fixed;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   text-align: center;
   align-content: center;
   font-size: 30px;
   box-sizing: border-box;
   overflow: hidden; 
 }
+
 .container{
   display: flex;
   background-color: #ccc;
-  width: 100%;
+  width: 100vw;
   align-items: center;
   justify-content: center;
-  height: 500px;
-  box-sizing: border-box;
+  height: 100vh;
+  /* box-sizing: border-box; */
   overflow: hidden; 
 }

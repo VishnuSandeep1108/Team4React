@@ -1,13 +1,15 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState,useEffect, useContext } from 'react';
 import axios from 'axios';
 
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRightFromBracket, faHeart, faCartShopping, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+  import {UserContext} from "../../App";
 
 import styles from "./Header.module.css";
 
 const Header = () => {
+  const {username, setUsername} = useContext(UserContext);
   const [wishlistCount, setWishlistCount] = useState(0);
   const [cartCount, setCartCount] = useState(0);
   const [loginBtnDisplay, setLoginBtnDisplay] = useState(true);
@@ -16,7 +18,7 @@ const Header = () => {
 const [isWomenHovered, setIsWomenHovered] = useState(false);
 const [isKidsHovered, setIsKidsHovered] = useState(false);
 const [isFootewearHoverd ,setIsFootwearHovered] =useState(false);
-const[username ,setUsername]=useState('John');
+// const[username ,setUsername]=useState('John');
 
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -29,21 +31,40 @@ const[username ,setUsername]=useState('John');
     navigate('/auth');
   };
 
+  function onWishlistClick(){
+    console.log("USERNAME: ",username);
+    
+    if(username)
+      navigate("/wishlist");
+    else
+      navigate("/auth");
+  }
+
+  function onCartClick()
+  {
+    console.log("USERNAME: ",username);
+
+    if(username)
+      navigate("/cart");
+    else
+      navigate("/auth");
+  }
   useEffect(() =>{
-    axios.get(`http://localhost:8000/users`).then((userDetails)=>{
-      console.log("User Details: ",userDetails.data);
-      let temp = [];
-      userDetails.data.map((user)=>{
-            if(user.username == username){
-              setWishlistCount(user.wishlist.length);
-              let cartTotal=0;
-              user.cart.map((cartItem)=>{
-                cartTotal+=cartItem.itemCount;
-              })
-              setCartCount(cartTotal);
-            }
+      axios.get(`http://localhost:8000/users?username=${username}`).then((userDetails)=>{
+        console.log(userDetails.data);
+        
+        let temp = [];
+        userDetails.data.map((user)=>{
+              if(user.username == username){
+                setWishlistCount(user.wishlist.length);
+                let cartTotal=0;
+                user.cart.map((cartItem)=>{
+                  cartTotal+=cartItem.itemCount;
+                })
+                setCartCount(cartTotal);
+              }
+        })
       })
-    })
   }) 
 
   return (
@@ -69,7 +90,7 @@ const[username ,setUsername]=useState('John');
              onMouseEnter={() => setIsMenHovered(true)}
              onMouseLeave={() => setIsMenHovered(false)}>
               
-              <Link className={`nav-link ${styles[`nav-link`]}`} to="/mens">
+              <Link className={`nav-link ${styles[`nav-link`]}`} to="/men">
                 Men
               </Link>
               {isMenHovered && (
@@ -86,7 +107,7 @@ const[username ,setUsername]=useState('John');
             <li className={`nav-item ${styles[`nav-item`]}`}
              onMouseEnter={() => setIsWomenHovered(true)}
              onMouseLeave={() => setIsWomenHovered(false)}>
-              <Link className={`nav-link ${styles[`nav-link`]}`} to="/womens">
+              <Link className={`nav-link ${styles[`nav-link`]}`} to="/women">
                 Women
               </Link>
               {isWomenHovered && (
@@ -104,7 +125,7 @@ const[username ,setUsername]=useState('John');
             <li className={styles[`nav-item`]}
              onMouseEnter={() => setIsKidsHovered(true)}
              onMouseLeave={() => setIsKidsHovered(false)}>
-              <Link className={styles[`nav-link`]} to="/kids">
+              <Link className={`nav-link ${styles[`nav-link`]}`} to="/kids">
                 Kids
               </Link>
               {
@@ -142,15 +163,15 @@ const[username ,setUsername]=useState('John');
               }
             
             </li>
-            <li className={`nav-item nav-icon ${styles[`nav-item`]} ${styles[`nav-icon`]}`}>
-              <Link className={`nav-link ${styles[`nav-link`]}`} to="/wishlist">
+            <li className={`nav-item nav-icon ${styles[`nav-item`]} ${styles[`nav-icon`]}`} onClick={()=>{onWishlistClick()}}>
+              <li className={`nav-link ${styles[`nav-link`]}`} onClick={()=>{onWishlistClick()}}>
                 <FontAwesomeIcon icon={faHeart} size="lg" /> {wishlistCount}
-              </Link>
+              </li>
             </li>
-            <li className={`nav-item nav-icon ${styles[`nav-item`]} ${styles[`nav-icon`]}`}>
-              <Link className={`nav-link ${styles[`nav-link`]}`} to="/cartpage">
+            <li className={`nav-item nav-icon ${styles[`nav-item`]} ${styles[`nav-icon`]}`} onClick={()=>{onCartClick()}}>
+              <li className={`nav-link ${styles[`nav-link`]}`} onClick={()=>{onCartClick()}}>
                 <FontAwesomeIcon icon={faCartShopping} size="lg" /> {cartCount}
-              </Link>
+              </li>
             </li>
             {loginBtnDisplay ? (
               <li className={`nav-item nav-icon ${styles[`nav-item`]} ${styles[`nav-icon`]}`}>

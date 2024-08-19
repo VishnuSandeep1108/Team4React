@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import styles from "./Card.module.css";
 
-function Card({ totalAmount }) {
+import {TotalAmountContext} from "../../App";
+
+
+function Card() {
+    const {totalAmount, setTotalAmount} = useContext(TotalAmountContext);
     const form = useForm({ mode: "all" });
     const navigate = useNavigate();
     const { register, handleSubmit, formState } = form;

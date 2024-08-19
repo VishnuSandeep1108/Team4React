@@ -161,7 +161,9 @@ img:hover {
 } */
 
 /* WISHLIST CSS */
+
 .heading{
+  margin: 50px auto 20px auto;
   color: black;
   font-size: 3em;
 }
@@ -214,9 +216,10 @@ input[type='text'] {
 }
 
 .box h3 {
+  font-family: cinzel;
   color: black;
   margin: 0 10px;
-  font-size: 120%;
+  font-size: 1.5em;
 }
 
 .box .price, .box .stock-status, .box .add-to-cart {
@@ -267,6 +270,7 @@ h1 {
 
 
 .top-sellers-categories{
+  font-size: 2em !important;
   margin:2px;
   position: relative;
   /* color: black; */
@@ -291,6 +295,10 @@ h1 {
   height: 3px;
   width: 100%;
   transform: skew(-42deg);
+}
+
+.top-sellers-categories:hover{
+  text-decoration: none !important;
 }
 
 .top-sellers-categories:hover .top-border{

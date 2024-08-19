@@ -1,11 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from "./Mens.module.css";
 import axios from 'axios';
 
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import {CategoryContext} from "../../App";
+import {ProductIdContext} from "../../App";
+import {UserContext} from "../../App";
+
+
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+
 function Mens() {
+  const navigate = useNavigate();
+  const {username, setUsername} = useContext(UserContext);
+  const {category, setCategory} = useContext(CategoryContext);
+  const {productId, setProductId} = useContext(ProductIdContext);
   const [mens, setMens] = useState([]);
-  const [username, setUsername] = useState("John");
+  // const [username, setUsername] = useState("John");
   const [loading, setLoading] = useState(true);
+
+  const [already, setAlready] = useState(false);
+  const [wishMsg, setWishMsg] = useState(false);
+  const [cartMsg, setCartMsg] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,15 +32,14 @@ function Mens() {
       setMens(res.data);
     });
 
-
-
+    window.scrollTo(0, 0)
   }, [username]);
 
   const onAddCart = (product) => {
     console.log(username);
     let flag = false;
 
-    if (username !== '') {
+    if (username) {
       console.log("VALID");
 
       axios.get(`http://localhost:8000/users?username=${username}`).then((user) => {
@@ -40,42 +56,75 @@ function Mens() {
           user.data[0].cart.push(product);
         }
 
-        axios.put(`http://localhost:8000/users/${user.data[0].id}`, user.data[0]).then(
-          alert("Added to Cart Successfully!")
-        );
+        axios.put(`http://localhost:8000/users/${user.data[0].id}`, user.data[0]).then(()=>{
+          setCartMsg(true);
+          setWishMsg(false);
+          setAlready(false);
+            setTimeout(()=>{
+              setCartMsg(false);
+            },3000);
+            // alert("Added to Cart!")
+        });
       });
+    }
+    else
+    {
+      navigate("/auth");
     }
   };
 
-  const onAddWishlist = (event, product) => {
-    event.preventDefault();
+  const onAddWishlist = (product) => {
     console.log(username);
     let flag = false;
 
-    if (username !== '') {
+    if (username) {
       console.log("VALID");
 
-      axios.get(`http://localhost:8000/users?username=${username}`).then((user) => {
-
+      axios.get(`http://localhost:8000/users?username=${username}`).then((user) => {        
         user.data[0].wishlist.forEach((item) => {
           if (item.id === product.id) {
             flag = true;
-            alert("Already Wishlisted!");
+            setAlready(true);
+            setCartMsg(false);
+            setWishMsg(false);
+            setTimeout(()=>{
+              setAlready(false);
+            },3000)
+            // alert("Already Wishlisted!");
             return;
           }
         });
 
         if (!flag) {
           user.data[0].wishlist.push(product);
-          alert("Wishlisted Successfully!");
+          setWishMsg(true);
+          setAlready(false);
+          setCartMsg(false);
+            setTimeout(()=>{
+              setWishMsg(false);
+            },3000)
+          // alert("Wishlisted Successfully!");
         }
 
         axios.put(`http://localhost:8000/users/${user.data[0].id}`, user.data[0]);
       });
     }
+    else
+    {
+      navigate("/auth");
+    }
   };
 
   return (
+    <>
+      <Header />
+      {already ? <p className={styles[`revealed-message`]}>Already Wishlisted!<div className={styles[`green-bottom`]}></div></p>:(null)}
+      {wishMsg ? <p className={styles[`revealed-message`]}>Wishlisted Successfully!<div className={styles[`green-bottom`]}></div></p>:(null)}
+      {cartMsg ? <p className={styles[`revealed-message`]}>Added to Cart Successfully!<div className={styles[`green-bottom`]}></div></p>:(null)}
+      {/* <p className={styles[`revealed-message`]}> <div className={styles[`green-bottom`]}></div></p>
+      <p className={styles[`revealed-message`]}> <div className={styles[`green-bottom`]}></div></p> */}
+      
+
     <div className={styles[`product-display`]}>
       {loading && (
         <div className={styles[`loading-spinner`]}>
@@ -100,11 +149,12 @@ function Mens() {
       <div className={styles[`product-display-container`]}>
         {mens.map(product => (
           <div className={`card ${styles[`card`]}`} key={product.id}>
+            <Link onClick={()=>{setCategory("mens"); setProductId(product.id)}} to={"/product-details"}>
             <img
               className={`card-img-top`}
               src={product.images[0]}
               alt={product.title}
-            />
+            /></Link>
             <div className={`card-body ${styles[`productDetails`]} ${styles[`card-body`]}`}>
               <h4 className={`card-title ${styles[`cardTitle`]} ${styles[`card-title`]}`}>{product.title}</h4>
               <p className={`card-text ${styles[`cardText`]} ${styles[`card-text`]}`}>{product.brand}</p>
@@ -113,13 +163,13 @@ function Mens() {
               </p>
             </div>
             <div className={`card-body ${styles[`wishlist`]} ${styles[`card-body`]}`}>
-              <a className={styles[`top-sellers-categories`]} onClick={(event) => { onAddWishlist(event, product) }}>
+              <a className={styles[`top-sellers-categories`]} onClick={() => { onAddWishlist(product) }}>
                 <span className={styles[`top-border`]}></span>
                 <span><i className="fa-solid fa-heart"></i> Wishlist</span>
                 <span className={styles[`bottom-border`]}></span>
               </a>
 
-              <a className={styles[`top-sellers-categories`]} onClick={(event) => { onAddCart(product) }}>
+              <a className={styles[`top-sellers-categories`]} onClick={() => { onAddCart(product) }}>
                 <span className={styles[`top-border`]}></span>
                 <span><i className="fa-solid fa-cart-shopping"></i> Add to Cart</span>
                 <span className={styles[`bottom-border`]}></span>
@@ -135,6 +185,9 @@ function Mens() {
 
       <div><p></p></div>
     </div>
+
+    <Footer />
+    </>
   );
 }
 

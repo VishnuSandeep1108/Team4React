@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Checkout.module.css";
 
-function Checkout({ totalAmount }) {
+import {TotalAmountContext} from "../../App";
+
+
+function Checkout() {
     const navigate = useNavigate();
+    const {totalAmount, setTotalAmount} = useContext(TotalAmountContext);
+
 
     return (
         <>

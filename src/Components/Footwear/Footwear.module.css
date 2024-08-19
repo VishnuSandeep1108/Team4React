@@ -3,6 +3,32 @@
   padding: 0;
 }
 
+.revealed-message{
+  display: block;
+  margin: 0 auto;
+  font-size: 1.8em;
+  color: black;
+  padding: 5px 10px;
+  color: green;
+}
+
+.green-bottom{
+  height: 5px;
+  /* background-color: green; */
+  animation: slideleft 10s linear infinite forwards;
+  background: linear-gradient(to right, green 0%, green 50%, white 100%);
+}
+
+@keyframes slideleft {
+  0%{
+    background-position: 0px;
+}
+
+100%{
+    background-position: -1000px;
+}
+}
+
 .hidden{
   display: none;
 }
@@ -43,7 +69,7 @@
 }
 
 .product-display > h1 {
-  margin: 50px auto;
+  margin: 20px auto 50px auto;
   font-weight: bold;
   font-family: "Cinzel Decorative", serif;
   font-size: 3.5em !important;
@@ -311,7 +337,7 @@ display: flex;
 width: 100vw;
 justify-content: center;
 align-items: center;
-height: 700px;
+height: 600px;
 }
 @keyframes bounce {
 0%, 75%, 100% {

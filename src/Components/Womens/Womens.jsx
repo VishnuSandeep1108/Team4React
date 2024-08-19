@@ -1,12 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from "./Womens.module.css";
 import axios from 'axios';
 
+import { Link, useNavigate } from 'react-router-dom';
+import {CategoryContext} from "../../App";
+import {ProductIdContext} from "../../App";
+import {UserContext} from "../../App";
+
+
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+
 function Womens() {
+  const navigate = useNavigate();
+  const {username, setUsername} = useContext(UserContext);
     const [womens, setWomens] = useState([]);
+    const {category, setCategory} = useContext(CategoryContext);
+  const {productId, setProductId} = useContext(ProductIdContext);
+
+  const [already, setAlready] = useState(false);
+  const [wishMsg, setWishMsg] = useState(false);
+  const [cartMsg, setCartMsg] = useState(false);
     
 
-    const [username, setUsername] = useState(["John"]);
+    // const [username, setUsername] = useState(["John"]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -17,7 +34,7 @@ function Womens() {
         setWomens(res.data);
       });
   
-  
+      window.scrollTo(0, 0)
   
     }, [username]);
     // const [cart, setCart] = useState([]);
@@ -41,7 +58,7 @@ function Womens() {
          console.log(username);
          let flag=false;
          
-         if(username!='')
+         if(username)
            {
              console.log("VALID");
              
@@ -61,16 +78,22 @@ function Womens() {
                  user.data[0].cart.push(product);
                }
                
-               axios.put(`http://localhost:8000/users/${user.data[0].id}`,user.data[0]).then(
-                 alert("Added to Cart Successfully!")
-               )
+               axios.put(`http://localhost:8000/users/${user.data[0].id}`,user.data[0]).then(()=>{
+                // alert("Added to Cart Successfully!");
+                setCartMsg(true);
+                setWishMsg(false);
+                setAlready(false);
+                  setTimeout(()=>{
+                    setCartMsg(false);
+                  },3000);
+               })
              })
            }
 
-        //    else
-        //    {
-
-        //    }
+           else
+           {
+              navigate("/auth");
+           }
          }
 
     const onAddWishlist = (product) =>
@@ -78,7 +101,7 @@ function Womens() {
     console.log(username);
     let flag=false;
     
-    if(username!='')
+    if(username)
       {
         console.log("VALID");
         
@@ -88,6 +111,13 @@ function Womens() {
             if(item.id === product.id)
             {
               flag = true;
+              // alert("Already Wishlisted")
+              setAlready(true);
+            setCartMsg(false);
+            setWishMsg(false);
+            setTimeout(()=>{
+              setAlready(false);
+            },3000)
               return;
             }
           })
@@ -95,23 +125,36 @@ function Womens() {
           if(flag === false)
           {
             user.data[0].wishlist.push(product);
+            axios.put(`http://localhost:8000/users/${user.data[0].id}`,user.data[0]).then(
+              // console.log(wishlist),
+              // alert("Wishlisted Successfully!")
+              ()=>{
+                setWishMsg(true);
+          setAlready(false);
+          setCartMsg(false);
+            setTimeout(()=>{
+              setWishMsg(false);
+            },3000)
+              }
+            )
           }
           
-          axios.put(`http://localhost:8000/users/${user.data[0].id}`,user.data[0]).then(
-            // console.log(wishlist),
-            alert("Wishlisted Successfully!")
-          )
+          
         })
       }
 
-    //   else
-    //   {
-    //     loginObs.onLoggingInHandler({refresh:false});
-    //     router.navigate(['auth']);
-    //   }
+      else
+      {
+        navigate("/auth");
+      }
    }
    
   return (
+    <>
+    <Header />
+    {already ? <p className={styles[`revealed-message`]}>Already Wishlisted!<div className={styles[`green-bottom`]}></div></p>:(null)}
+      {wishMsg ? <p className={styles[`revealed-message`]}>Wishlisted Successfully!<div className={styles[`green-bottom`]}></div></p>:(null)}
+      {cartMsg ? <p className={styles[`revealed-message`]}>Added to Cart Successfully!<div className={styles[`green-bottom`]}></div></p>:(null)}
 
     <div className={styles[`product-display`]}>
     {loading && (
@@ -140,7 +183,12 @@ function Womens() {
     
   
  <div className={`card ${styles[`card`]}`} key={product.id}>
-      <img className={`card-img-top`} src={product.images[0]} />
+      <Link onClick={()=>{setCategory("womens"); setProductId(product.id)}} to={"/product-details"}>
+            <img
+              className={`card-img-top`}
+              src={product.images[0]}
+              alt={product.title}
+            /></Link>
       <div className={`card-body ${styles[`productDetails`]} ${styles[`card-body`]}`}>
       <h4 className={`card-title ${styles[`cardTitle`]} ${styles[`card-title`]}`}>{product.title}</h4>
               <p className={`card-text ${styles[`cardText`]} ${styles[`card-text`]}`}>{product.brand}</p>
@@ -149,13 +197,13 @@ function Womens() {
               </p>
             </div>
             <div className={`card-body ${styles[`wishlist`]} ${styles[`card-body`]}`}>
-              <a className={styles[`top-sellers-categories`]} onClick={(event) => { onAddWishlist(event, product) }}>
+              <a className={styles[`top-sellers-categories`]} onClick={() => { onAddWishlist(product) }}>
                 <span className={styles[`top-border`]}></span>
                 <span><i className="fa-solid fa-heart"></i> Wishlist</span>
                 <span className={styles[`bottom-border`]}></span>
               </a>
 
-              <a className={styles[`top-sellers-categories`]} onClick={(event) => { onAddCart(product) }}>
+              <a className={styles[`top-sellers-categories`]} onClick={() => { onAddCart(product) }}>
                 <span className={styles[`top-border`]}></span>
                 <span><i className="fa-solid fa-cart-shopping"></i> Add to Cart</span>
                 <span className={styles[`bottom-border`]}></span>
@@ -171,6 +219,9 @@ function Womens() {
 
   <div><p></p></div>
 </div>
+
+<Footer />
+</>
 
           )
 }

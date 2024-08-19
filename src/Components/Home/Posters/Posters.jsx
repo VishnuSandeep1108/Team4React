@@ -7,7 +7,7 @@ function Posters() {
 
   return (
     <div className={styles[`posters`]}>
-      <Link to={"/mens"} className={styles[`poster1`]}>
+      <Link to={"/men"} className={styles[`poster1`]}>
         <img className={styles[`poster-img`]} src='./Home-Images/poster1.jpg' />
         <div className={styles[`poster1-text`]}>
           <p style={{marginBottom:'0px'}}>Dresses to be noticed.</p>
@@ -24,7 +24,7 @@ function Posters() {
         </div>
       </Link>
 
-      <Link to={"/womens"} className={styles[`poster2`]}>
+      <Link to={"/women"} className={styles[`poster2`]}>
         <img className={styles[`poster-img`]} src='./Home-Images/poster2.jpg' />
         <div className={styles[`poster2-text`]}>
           <h1>Believe in yourself.</h1>
@@ -33,7 +33,7 @@ function Posters() {
         </div>
       </Link>
       
-      <Link to={"/womens"} className={styles[`poster3`]}>
+      <Link to={"/women"} className={styles[`poster3`]}>
         <img className={styles[`poster-img`]} src='./Home-Images/poster3.jpg' />
         <div className={styles[`poster3-text`]}>
           <h1>Be my fashionista.</h1>
@@ -42,7 +42,7 @@ function Posters() {
         </div>
       </Link>
 
-      <Link to={"/new-arrivals"} className={styles[`poster4`]}>
+      <Link to={"/men"} className={styles[`poster4`]}>
         <img className={styles[`poster-img`]} src='./Home-Images/poster4.jpg' />
         <div className={styles[`poster4-text`]}>
           <p style={{"marginBottom": "0px"}}>Fashioning You!</p>

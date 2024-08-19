@@ -246,6 +246,7 @@ padding: 20px;
 }
 
 .wrapper > h1{
+    margin: -10px auto;
     color: black;
     font-size: 3em;
 }
@@ -306,6 +307,7 @@ padding: 20px;
     flex-direction: column;
     margin: 10px 10px;
     width: 700px ;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);    
    
 }
 .box {
@@ -360,8 +362,13 @@ hr{
     margin: 10px 10px;
 }
 
-.quantityBtn:hover{
-    cursor: pointer;
+.right-bar input{
+    margin: 5px auto;
+}
+
+.quantityBtn{
+    cursor: pointer !important;
+    font-size: 1.5em;
 }
 
 .right-bar input{
@@ -387,6 +394,7 @@ hr{
     background: black;
 } */
 .top-sellers-categories{
+    text-decoration: none !important;
     position: relative;
     /* color: black; */
     color: white;

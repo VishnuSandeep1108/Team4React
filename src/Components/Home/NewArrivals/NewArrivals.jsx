@@ -6,9 +6,11 @@ import styles from "./NewArrivals.module.css";
 function NewArrivals() {
 
   useEffect(()=>{
+    // console.log("New Ariivals INIT");
+    
     let separator = null;
-    separator = document.querySelector('.edgtf-separator');
-    const polygons = document.querySelectorAll('.edgtf-polygon');
+    separator = document.querySelector(`.${styles['edgtf-separator']}`);
+    const polygons = document.querySelectorAll(`.${styles['edgtf-polygon']}`);
 
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
@@ -21,6 +23,9 @@ function NewArrivals() {
     }
 
     function checkScroll() {
+      // console.log("New Arrivals Started");
+      // console.log(separator);
+      
         if (separator && isInViewport(separator)) {
             separator.classList.add('animate');
             window.removeEventListener('scroll', checkScroll);
@@ -58,7 +63,7 @@ function NewArrivals() {
 
             <h5>Fresh Threads for Fresh Vibes! Check Out What's New!</h5>
 
-            <Link to={"/new-arrivals"} className={styles[`new-arrivals-button`]}>
+            <Link to={"/men"} className={styles[`new-arrivals-button`]}>
               <span className={styles[`top-border`]}></span>
               <span>Take a Peek!</span>
               <span className={styles[`bottom-border`]}></span>

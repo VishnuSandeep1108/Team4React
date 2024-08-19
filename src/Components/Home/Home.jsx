@@ -13,6 +13,10 @@ import styles from "./Home.module.css";
 
 function Home() {
 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   const [homeImgUrl, setHomeImgUrl] = useState(null);
 
   const homeCarouselTopStyle = {

@@ -1,12 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from "./Kids.module.css";
 import axios from 'axios';
 
-function Kids() {
-    const [kids, setKids] = useState([]);
-    
+import { Link, useNavigate } from 'react-router-dom';
+import {CategoryContext} from "../../App";
+import {ProductIdContext} from "../../App";
 
-    const [username, setUsername] = useState(["John"]);
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import {UserContext} from "../../App";
+
+
+function Kids() {
+  const navigate = useNavigate();
+  const {username, setUsername} = useContext(UserContext);
+
+    const [kids, setKids] = useState([]);
+    const {category, setCategory} = useContext(CategoryContext);
+  const {productId, setProductId} = useContext(ProductIdContext);
+    
+  const [already, setAlready] = useState(false);
+  const [wishMsg, setWishMsg] = useState(false);
+  const [cartMsg, setCartMsg] = useState(false);
+
+    // const [username, setUsername] = useState(["John"]);
     const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +34,7 @@ function Kids() {
       setKids(res.data);
     });
 
-
+    window.scrollTo(0, 0)
 
   }, [username]);
 
@@ -42,7 +59,7 @@ function Kids() {
          console.log(username);
          let flag=false;
          
-         if(username!='')
+         if(username)
            {
              console.log("VALID");
              
@@ -61,17 +78,23 @@ function Kids() {
                {
                  user.data[0].cart.push(product);
                }
-               
-               axios.put(`http://localhost:8000/users/${user.data[0].id}`,user.data[0]).then(
-                 alert("Added to Cart Successfully!")
-               )
+
+               axios.put(`http://localhost:8000/users/${user.data[0].id}`, user.data[0]).then(()=>{
+                setCartMsg(true);
+                setWishMsg(false);
+                setAlready(false);
+                  setTimeout(()=>{
+                    setCartMsg(false);
+                  },3000);
+                  // alert("Added to Cart!")
+              });
              })
            }
 
-        //    else
-        //    {
-
-        //    }
+           else
+           {
+              navigate("/auth");
+           }
          }
 
     const onAddWishlist = (product) =>
@@ -79,7 +102,7 @@ function Kids() {
     console.log(username);
     let flag=false;
     
-    if(username!='')
+    if(username)
       {
         console.log("VALID");
         
@@ -89,6 +112,13 @@ function Kids() {
             if(item.id === product.id)
             {
               flag = true;
+              setAlready(true);
+            setCartMsg(false);
+            setWishMsg(false);
+            setTimeout(()=>{
+              setAlready(false);
+            },3000)
+              // alert("Already Wishlisted")
               return;
             }
           })
@@ -96,23 +126,37 @@ function Kids() {
           if(flag === false)
           {
             user.data[0].wishlist.push(product);
+            axios.put(`http://localhost:8000/users/${user.data[0].id}`,user.data[0]).then(
+              // console.log(wishlist),
+              // alert("Wishlisted Successfully!")
+              ()=>{
+                setWishMsg(true);
+          setAlready(false);
+          setCartMsg(false);
+            setTimeout(()=>{
+              setWishMsg(false);
+            },3000)
+              }
+            )
           }
           
-          axios.put(`http://localhost:8000/users/${user.data[0].id}`,user.data[0]).then(
-            // console.log(wishlist),
-            alert("Wishlisted Successfully!")
-          )
+          
         })
       }
 
-    //   else
-    //   {
-    //     loginObs.onLoggingInHandler({refresh:false});
-    //     router.navigate(['auth']);
-    //   }
+      else
+      {
+        navigate("/auth");
+      }
    }
 
   return (
+    <>
+    <Header />
+    {already ? <p className={styles[`revealed-message`]}>Already Wishlisted!<div className={styles[`green-bottom`]}></div></p>:(null)}
+      {wishMsg ? <p className={styles[`revealed-message`]}>Wishlisted Successfully!<div className={styles[`green-bottom`]}></div></p>:(null)}
+      {cartMsg ? <p className={styles[`revealed-message`]}>Added to Cart Successfully!<div className={styles[`green-bottom`]}></div></p>:(null)}
+
     <div className={styles[`product-display`]}>
     {loading && (
       <div className={styles[`loading-spinner`]}>
@@ -140,8 +184,12 @@ function Kids() {
     
   
  <div className={`card ${styles[`card`]}`} key={product.id}>
- <img className={`card-img-top`} src={product.images[0]} />
- <div className={`card-body ${styles[`productDetails`]} ${styles[`card-body`]}`}>
+<Link onClick={()=>{setCategory("kids"); setProductId(product.id)}} to={"/product-details"}>
+            <img
+              className={`card-img-top`}
+              src={product.images[0]}
+              alt={product.title}
+            /></Link> <div className={`card-body ${styles[`productDetails`]} ${styles[`card-body`]}`}>
  <h4 className={`card-title ${styles[`cardTitle`]} ${styles[`card-title`]}`}>{product.title}</h4>
          <p className={`card-text ${styles[`cardText`]} ${styles[`card-text`]}`}>{product.brand}</p>
          <p className={`card-text ${styles[`cardText`]} ${styles[`card-text`]}`}>
@@ -149,7 +197,7 @@ function Kids() {
          </p>
        </div>
        <div className={`card-body ${styles[`wishlist`]} ${styles[`card-body`]}`}>
-         <a className={styles[`top-sellers-categories`]} onClick={(event) => { onAddWishlist(event, product) }}>
+         <a className={styles[`top-sellers-categories`]} onClick={(event) => { onAddWishlist(product) }}>
            <span className={styles[`top-border`]}></span>
            <span><i className="fa-solid fa-heart"></i> Wishlist</span>
            <span className={styles[`bottom-border`]}></span>
@@ -171,7 +219,8 @@ function Kids() {
 
   <div><p></p></div>
 </div>
-
+<Footer />
+</>
           )
 }
 

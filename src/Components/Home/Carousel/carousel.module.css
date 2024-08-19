@@ -7,7 +7,7 @@
 
 .text-of-carousel{
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: 15%;
     z-index: 100;
 }
@@ -81,6 +81,8 @@
     animation: slide-left 0.5s ease-out forwards;
     text-shadow: 1px 1px 10px black;
     text-align: left;
+    color: white;
+    font-size: 3em;
 }
 
 .carousel-text-middle{
@@ -90,7 +92,7 @@
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    font-size: 450%;
+    font-size: 7em !important;
 }
 
 .carousel-text-bottom{
@@ -98,6 +100,8 @@
     animation: slide-left 0.5s 0.2s ease-out forwards;
     text-shadow: 1px 1px 10px black;
     text-align: left;
+    color: white;
+    font-size: 3em;
 }
 
 @keyframes slide-left {

@@ -1,17 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import styles from './Wishlist.module.css'
 import h from './empty-wishlist.png'
 import axios from 'axios'
-import { Dropdown } from 'bootstrap'
+import { Dropdown } from 'bootstrap';
+
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+
+import {UserContext} from "../../App";
 
 
 function Wishlist() {
+    const {username, setUsername} = useContext(UserContext);
     const [searchee,setSearch]=useState(['clothing','mens-shirts','womens-dresses','womens-shoes','footwear','mens-shoes',''])
-    const [username,setUsername]=useState('John')
+    // const [username,setUsername]=useState('John')
     const [userid,setid]=useState('aacd')
     const[data,setData]=useState([])
     const[cart,setCart]=useState([])
-    const [category,setCategory]=useState('none')
+    const [category,setCategory]=useState('anything')
     const [n,setsorted]=useState()
     const [searche,hhh]=useState('')
     useEffect(
@@ -19,10 +25,12 @@ function Wishlist() {
             axios.get(`http://localhost:8000/users?username=${username}`).then((user)=>{
                 console.log("DATA: ",user.data);
                 console.log("DATA[0]: ",user.data[0]);
+                setid(user.data[0].id);
                 
                 setData(user.data)})
         },[data]
     )
+
     const cartadd=(j)=>{
         //data.cart.push(j)
         let temp = cart;
@@ -78,6 +86,7 @@ function Wishlist() {
 
 //     </div>
 <>
+<Header />
 <h1 className={styles[`heading`]}>WISHLIST</h1>
 <a className={styles[`top-sellers-categories`]} onClick={()=>categoryy('mens-shirts')}><span className={styles[`top-border`]}></span>
               <span>Mens clothing</span>
@@ -234,6 +243,7 @@ return (
     }
 </div> */}
 </div>
+<Footer />
 </>
 )
 }

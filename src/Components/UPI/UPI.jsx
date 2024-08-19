@@ -1,9 +1,14 @@
-import React from "react";
+import React,{useContext} from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import styles from "./UPI.module.css";
 
-function UPI({ totalAmount }) {
+import {TotalAmountContext} from "../../App";
+
+
+function UPI() {
+    const {totalAmount, setTotalAmount} = useContext(TotalAmountContext);
+
     const form = useForm({ mode: "all" });
     const navigate = useNavigate();
     const { register, control, handleSubmit, formState } = form;

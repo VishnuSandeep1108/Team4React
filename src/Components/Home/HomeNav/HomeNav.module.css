@@ -11,12 +11,26 @@ nav{
     font-family: "Cinzel Decorative", serif;
     font-weight: 700;
     font-style: normal;
+    color: white;
+}
+
+.navibar-brand:hover{
+    color: rgb(255, 255, 255,0.6);
+}
+
+li{
+    /* cursor: pointer; */
 }
 
 .navilink{
     font-family: "Cinzel", serif;
     font-weight: 700;
     font-style: normal;
+}
+
+.splnaviitem{
+    cursor: pointer;
+    margin-top: 5px;
 }
 
 .navibar-brand, .navilink{
@@ -32,15 +46,15 @@ nav{
     font-size: 120%;
 }
 
+.navilink:hover{
+    text-decoration: none !important;
+    color: rgb(255, 255, 255,0.6) !important;
+}
+
 .navibar-toggler-icon{
     padding: 1px;
     color: white;
     border: 2px solid white;
-}
-
-.naviitem:nth-child(5)
-{
-    margin-right: 70px;
 }
 
 @media screen and (min-width: 1440px) {

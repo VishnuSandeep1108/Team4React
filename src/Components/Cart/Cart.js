@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 
 import axios from 'axios';
 
@@ -6,15 +7,24 @@ import styles from './Cart.module.css';
 
 import a from './empty-cart.gif'
 
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+
+import {UserContext} from "../../App";
+import {TotalAmountContext} from "../../App";
+
 //import emptyImg from '../../Assests/empty-cart.gif'
 
 function Cart() {
-    const [username,setUsername] = useState("a");
+    const {username, setUsername} = useContext(UserContext);
+    const {totalAmount, setTotalAmount} = useContext(TotalAmountContext);
+
+    // const [username,setUsername] = useState("John");
     const [currentUser,setCurrentUser] = useState(null);
     const[cart,setCart]=useState(null);
     const [totalPrice, setTotalPrice] = useState(0);
     const [Coupon,setCoupon]=useState("")
-    const[userID,setUserID]=useState("547a")
+    const[userID,setUserID]=useState("aacd")
     let cartTax=0;
     let cartTotal=0;
     const [discount,setdiscount]=useState(0)
@@ -24,7 +34,8 @@ function Cart() {
         ()=>{
             axios.get(`http://localhost:8000/users/?username=${username}`).then((user)=>{
                 setCurrentUser(user.data[0]);
-                setCart(user.data[0].cart);       
+                setCart(user.data[0].cart);  
+                setUserID(user.data[0].id);     
                 totalPriceCalculator();
                 
             });
@@ -48,7 +59,7 @@ function Cart() {
             currentUser.cart.forEach((cartItem)=>{
                 total+=(cartItem.itemCount * cartItem.price);
             })
-
+            setTotalAmount(total);
             setTotalPrice(total);
             
         }
@@ -152,6 +163,9 @@ function Cart() {
         
     } 
     return (    
+        <>
+        <Header />
+        
     <div className={styles[`content-wrapper`]}>
         <div className={styles[`wrapper`]}>
             <h1>CART</h1>
@@ -169,7 +183,7 @@ function Cart() {
                         </p>
                     <img src={cartItem.images[0]} />
                     <div className={styles[`content`]}>
-                            <span><h4>{cartItem.title}</h4></span><span><h4>Rs. {cartItem.price}</h4></span> <span><h4><span className={styles[`quantityBtn`]} onClick={()=>{countDecrease(cartItem,index)}}> - </span> &nbsp;<span>{cartItem.itemCount}</span> &nbsp;<span className='quantityBtn' onClick={()=>{countIncrease(cartItem)}}> + </span></h4></span>
+                            <span><h4>{cartItem.title}</h4></span><span><h4>Rs. {cartItem.price}</h4></span> <span><h4><span className={styles[`quantityBtn`]} onClick={()=>{countDecrease(cartItem,index)}}> - </span> &nbsp;<span className={styles[`quantityBtn`]}>{cartItem.itemCount}</span> &nbsp;<span className={styles[`quantityBtn`]} onClick={()=>{countIncrease(cartItem)}}> + </span></h4></span>
 
                    
                     </div>    
@@ -192,7 +206,7 @@ function Cart() {
             <a className={styles[`top-sellers-categories`]} onClick={()=>applyCode(totalPrice)}>
               <span className={styles[`top-border`]}></span>
               <i className='fa fa-tag'></i>
-              <span>Apply Code</span>
+              <span>&nbsp;&nbsp;Apply Code</span>
               <span className={styles[`bottom-border`]}></span>
             </a>
 
@@ -206,17 +220,19 @@ function Cart() {
         <p>Discount : Rs. {discount.toFixed(2)} /-</p>
         <p>Total    : Rs. {cartTotal.toFixed(2)} /-</p>
         {/* <a><i className='fa fa-shopping-cart'></i>Place Order</a> */}
-        <a className={styles[`top-sellers-categories`]}>
+        <Link to={"/checkout"} className={styles[`top-sellers-categories`]}>
               <span className={styles[`top-border`]}></span>
               <i className='fa fa-shopping-cart'></i>
-              <span>Place Order</span>
+              <span>&nbsp;&nbsp;Place Order</span>
               <span className={styles[`bottom-border`]}></span>
-            </a>
+            </Link>
         </div>
         </div>
       </div>
       </div>
       </div>
+      <Footer />
+      </>
       
     )
     

@@ -57,6 +57,10 @@ function TopSellers() {
       }
 
       function checkScroll() {
+        // console.log("TOPS sart");
+        // console.log(separator);
+        
+        
           if (isInViewport(separator)) {
               separator.classList.add(styles['animate']);
               window.removeEventListener('scroll', checkScroll);
