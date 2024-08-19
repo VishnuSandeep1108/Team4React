@@ -6,6 +6,10 @@ import ProductDetails from './Components/Product-Details/Product-Details';
 import Wishlist from './Components/Wishlist/Wishlist';
 
 import './App.css';
+import Mens from '../src/Components/Mens/Mens'; 
+import Womens from './Components/Womens/Womens';
+import Kids from './Components/Kids/Kids';
+import Footwear from './Components/Footwear/Footwear'; 
 
 export const CategoryContext = createContext();
 export const ProductIdContext = createContext();
