@@ -44,7 +44,7 @@
   display: none;
 }
 
-#Indicator {
+.Indicator {
   width: 50%;
   height: 3px;
   /* background: #ff523b; */
@@ -56,11 +56,11 @@
   border-radius: 2px;
 }
 
-#login:checked ~ .form-btn #Indicator {
+.login:checked ~ .form-btn .Indicator {
   transform: translateX(0%);
 }
 
-#signup:checked ~ .form-btn #Indicator {
+.signup:checked ~ .form-btn .Indicator {
   transform: translateX(100%);
 }
 
@@ -69,11 +69,11 @@
   transition: all 0.3s ease;
 }
 
-#login:checked ~ .form-content#LoginForm {
+#login:checked ~ .form-content.LoginForm {
   display: block;
 }
 
-#signup:checked ~ .form-content#RegForm {
+#signup:checked ~ .form-content.RegForm {
   display: block;
 }
 
