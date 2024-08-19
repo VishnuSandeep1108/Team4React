@@ -1,11 +1,21 @@
-h1 {
+.payment-header {
+    padding: 3% 15%;
+    text-align: center;
+}
+
+.dark {
+    background-color: #121313;
+    color: #fefffe;
+}
+
+.big-heading {
     text-align: center;
     color: white;
     padding: 10px 10px;
 }
 
-h3 {
-    font-family: "Cinzel Decorative";
+.small-heading {
+    font-family: "Cinzel Decorative" !important;
     font-size: 30px;
     text-align: center;
     font-weight: bold;

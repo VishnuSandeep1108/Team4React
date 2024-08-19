@@ -7,17 +7,17 @@ function Checkout({ totalAmount }) {
 
     return (
         <>
-            <section id="payment-header" className={styles[`dark`]}>
-                <h1>Paying ₹{ totalAmount }</h1>
+            <section className={`${styles[`payment-header`]} ${styles[`dark`]}`}>
+                <h1 className={styles[`big-heading`]}>Paying ₹{totalAmount}</h1>
             </section>
             <div className={styles[`pad`]}>
-            <h3>Select Mode of Payment</h3>
+                <h3 className={styles[`small-heading`]}>Select Mode of Payment</h3>
             </div>
-            <div class="buttons">
-                <button className={styles[`dark`]} onClick={() => navigate('/card')}>
+            <div className={styles[`buttons`]}>
+                <button className={styles[`dark`]} onClick={() => navigate("/card")}>
                     CARD
                 </button>
-                <button className={styles[`dark`]} onClick={() => navigate('/upi')}>
+                <button className={styles[`dark`]} onClick={() => navigate("/upi")}>
                     UPI
                 </button>
             </div>
