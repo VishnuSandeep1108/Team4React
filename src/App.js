@@ -6,6 +6,9 @@ import ProductDetails from './Components/Product-Details/Product-Details';
 import Wishlist from './Components/Wishlist/Wishlist';
 
 import './App.css';
+import Cart from './Components/Cart/Cart';
+import Address from './Components/Address/Address';
+
 import Mens from '../src/Components/Mens/Mens'; 
 import Womens from './Components/Womens/Womens';
 import Kids from './Components/Kids/Kids';
