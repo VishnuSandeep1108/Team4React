@@ -1,0 +1,39 @@
+.contact,.address{
+    padding: 20px;
+    width: 500px;
+    height: auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px;
+    justify-content: center;
+    margin: 20px auto ;
+   
+}
+
+.alert{
+    color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button{
+    cursor: pointer; 
+    background-color: gray;/*#76bfb6*/
+    color: #fff;
+    padding: 10px;
+    border-radius: 9px;
+    font-weight: 100;
+    transition: color 0.3s ease;
+}
+
+.button:hover{
+    background-color: black;
+}

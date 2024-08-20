@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
 import './index.css';
-
+import  "https://kit.fontawesome.com/3ab6fe4f4d.js"
 import reportWebVitals from './reportWebVitals';
 
 

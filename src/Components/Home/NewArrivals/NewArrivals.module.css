@@ -1,0 +1,151 @@
+.new-arrivals{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    height: 80vh;
+    margin-bottom: 30px;
+}
+
+.new-arrivals-left{
+    grid-column: span 3;
+    background-image: url("../../../../public/Home-Images/new-arrivals1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.new-arrivals-right{
+    grid-column: span 2;
+    background-color: rgb(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.edgtf-separator{
+    margin-bottom: 30px;
+}
+
+.edgtf-polygon {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.edgtf-polygon-1 {
+    transition-delay: 0.1s;
+}
+
+.edgtf-polygon-2 {
+    transition-delay: 0.2s;
+}
+
+.edgtf-polygon-3 {
+    transition-delay: 0.3s;
+}
+
+.edgtf-polygon-4 {
+    transition-delay: 0.4s;
+}
+
+.edgtf-polygon-5 {
+    transition-delay: 0.5s;
+}
+
+.edgtf-polygon-6 {
+    transition-delay: 0.6s;
+}
+
+.edgtf-separator.animate .edgtf-polygon {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* 
+.new-arrivals-right-text{
+    font-size: 3em;
+} */
+
+.new-arrivals-right-text > h3{
+    margin: 0 auto;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.new-arrivals-right-text > h5{
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.new-arrivals-button{
+    position: relative;
+    color: rgb(255,255,255,0.8);
+    background-color: rgb(0,0,0,0.6);
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 15px;
+    font-family: "Cinzel", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    border-left: 4px solid rgb(0,0,0,0.6);
+    border-right: 4px solid rgb(0,0,0,0.6);
+    text-decoration: none;
+}
+
+.top-border{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    transform: skew(-42deg);
+    background: black;
+}
+
+.new-arrivals-button:hover .top-border{
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 61%, transparent 61%, transparent 69%, rgb(0, 0, 0) 69%, rgb(0, 0, 0) 100%);
+    animation: upperborder 20s linear infinite forwards;
+}
+
+.new-arrivals-button:hover{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(255,255,255,0.2);
+}
+
+.bottom-border{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    transform: skew(-42deg);
+    background: black;
+}
+
+.new-arrivals-button:hover .bottom-border{
+    background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 35%, transparent 35%, transparent 43%, rgb(0, 0, 0) 43%, rgb(0, 0, 0) 100%);
+    animation: lowerborder 20s linear infinite forwards;
+}
+
+@keyframes upperborder{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position: -1000px;
+    }
+}
+
+
+@keyframes lowerborder{
+    0%{
+        background-position: 0px;
+    }
+
+    100%{
+        background-position: 1000px;
+    }
+}

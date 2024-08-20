@@ -1,0 +1,65 @@
+nav{
+    background-color: transparent;
+    z-index: 100;
+}
+
+.navibar{
+    padding: 10px 30px;
+}
+
+.navibar-brand{
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+
+.navibar-brand:hover{
+    color: rgb(255, 255, 255,0.6);
+}
+
+li{
+    /* cursor: pointer; */
+}
+
+.navilink{
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.splnaviitem{
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.navibar-brand, .navilink{
+    color: white;
+    font-weight: bold;
+    margin: 0 23px;
+    font-size: 180%;
+    text-shadow: 1px 1px 1px black;
+}
+
+.navilink{
+    font-weight: 700;
+    font-size: 120%;
+}
+
+.navilink:hover{
+    text-decoration: none !important;
+    color: rgb(255, 255, 255,0.6) !important;
+}
+
+.navibar-toggler-icon{
+    padding: 1px;
+    color: white;
+    border: 2px solid white;
+}
+
+@media screen and (min-width: 1440px) {
+    .naviitem:nth-child(5)
+    {
+        margin-right: 250px;
+    }
+}

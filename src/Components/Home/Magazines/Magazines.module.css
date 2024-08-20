@@ -1,0 +1,51 @@
+.magazine-container{
+    display: flex;
+    gap: 40px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    padding-bottom: 40px;
+    font-size: 1.2em;
+}
+
+.magazine-container > h1{
+    color: gray;
+}
+
+.magazine-container h1:nth-child(1){
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.magazine-container h1:nth-child(2){
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.magazine-container h1:nth-child(3){
+    font-family: "Oleo Script", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.magazine-container h1:nth-child(4){
+    font-family: "Monoton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.magazine-container h1:nth-child(5){
+    font-family: "Fredericka the Great", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.magazine-container h1:nth-child(6){
+    font-family: "Foldit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
