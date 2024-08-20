@@ -23,6 +23,10 @@ function Mens() {
   const [already, setAlready] = useState(false);
   const [wishMsg, setWishMsg] = useState(false);
   const [cartMsg, setCartMsg] = useState(false);
+  const [searche,hhh]=useState('');
+  const [searchee,setSearch]=useState(['clothing','mens-shirts','womens-dresses','womens-shoes','footwear','mens-shoes',''])
+  const [defaultOrder, setDefaultOrder] = useState([]);
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -30,12 +34,14 @@ function Mens() {
     }, 2000)
     axios.get('http://localhost:8000/mens').then((res) => {
       setMens(res.data);
+      setDefaultOrder(res.data);
     });
 
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
   }, [username]);
 
   const onAddCart = (product) => {
+    window.scrollTo(0, 0)
     console.log(username);
     let flag = false;
 
@@ -55,7 +61,7 @@ function Mens() {
         if (!flag) {
           user.data[0].cart.push(product);
         }
-
+        
         axios.put(`http://localhost:8000/users/${user.data[0].id}`, user.data[0]).then(()=>{
           setCartMsg(true);
           setWishMsg(false);
@@ -74,6 +80,7 @@ function Mens() {
   };
 
   const onAddWishlist = (product) => {
+    window.scrollTo(0, 0)
     console.log(username);
     let flag = false;
 
@@ -115,6 +122,65 @@ function Mens() {
     }
   };
 
+  const search=(event)=>{
+    const id=event.target.value
+    console.log("ID: ",id);
+    
+  let flag=false
+    for(let i of searchee){
+   
+        if (id===i.substring(0,id.length)){
+            hhh(i)
+            console.log("I: ",i);
+            
+            flag=true
+        }
+        console.log(i.substring(0,id.length))
+        console.log(id)
+    }
+    if(!flag){
+        hhh('Not Found')
+    }
+}
+
+const handleSortChange = (event) => {
+  const value = event.target.value;
+  if (value === "lower") {
+    priceLowerCmp();
+  } else if (value === "higher") {
+    priceHigherCmp();
+  }
+}
+
+function lowerCmp(a,b)
+    {
+      return a.price - b.price;
+    }
+
+    function priceLowerCmp()
+    {
+      let temp = [...mens];
+      console.log("TEMP BEFORE: ",temp);
+      
+      temp.sort(lowerCmp);
+      console.log("TEMP AFTER: ",temp);
+      
+
+      setMens(temp);
+    }
+
+    function higherCmp(a,b)
+    {
+      return b.price-a.price;
+    }
+
+    function priceHigherCmp()
+    {
+      let temp = [...mens];
+      temp.sort(lowerCmp);
+      setMens(temp);
+    }
+
   return (
     <>
       <Header />
@@ -146,6 +212,13 @@ function Mens() {
         </div>
       )}
       <h1>Men's Collection</h1>
+      {/* <label for="sortby">Sort By</label>
+      <select id='sortby' onChange={handleSortChange}>
+          <option value="relevant" selected="selected">Most Relevant</option>
+          <option value="lower">Price : Lower to Higher</option>
+          <option value="higher">Price : Higher to Lower</option>
+        </select> */}
+      {/* <span className={styles[`bottom-border`]}></span> <input type='text' className='styled-input' onChange={(event)=>{search(event)}}></input> */}
       <div className={styles[`product-display-container`]}>
         {mens.map(product => (
           <div className={`card ${styles[`card`]}`} key={product.id}>

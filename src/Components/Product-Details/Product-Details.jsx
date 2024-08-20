@@ -27,6 +27,10 @@ const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 const [relatedProducts, setRelatedProducts] = useState([]);
 // const [username, setUsername] = useState("John");
 
+const [already, setAlready] = useState(false);
+const [wishMsg, setWishMsg] = useState(false);
+const [cartMsg, setCartMsg] = useState(false);
+
 const onAddCart = (product) =>
     {
      console.log(username);
@@ -52,9 +56,16 @@ const onAddCart = (product) =>
              user.data[0].cart.push(product);
            }
            
-           axios.put(`http://localhost:8000/users/${user.data[0].id}`,user.data[0]).then(
-             alert("Added to Cart Successfully!")
-           )
+           axios.put(`http://localhost:8000/users/${user.data[0].id}`, user.data[0]).then(()=>{
+            window.scrollTo(0, 0);
+          setCartMsg(true);
+          setWishMsg(false);
+          setAlready(false);
+            setTimeout(()=>{
+              setCartMsg(false);
+            },3000);
+            // alert("Added to Cart!")
+        });
          })
        }
        else
@@ -73,12 +84,18 @@ if(username)
     console.log("VALID");
     
     axios.get(`http://localhost:8000/users?username=${username}`).then((user)=>{
-            
+      window.scrollTo(0, 0)
       user.data[0].wishlist.forEach((item)=>{
         if(item.id === product.id)
         {
           flag = true;
-          alert("Already Wishlisted")
+          setAlready(true);
+            setCartMsg(false);
+            setWishMsg(false);
+            setTimeout(()=>{
+              setAlready(false);
+            },3000)
+          // alert("Already Wishlisted")
           return;
         }
       })
@@ -88,7 +105,15 @@ if(username)
         user.data[0].wishlist.push(product);
         axios.put(`http://localhost:8000/users/${user.data[0].id}`,user.data[0]).then(
           // console.log(wishlist),
-          alert("Wishlisted Successfully!")
+          // alert("Wishlisted Successfully!")
+          ()=>{
+            setWishMsg(true);
+          setAlready(false);
+          setCartMsg(false);
+            setTimeout(()=>{
+              setWishMsg(false);
+            },3000)
+          }
         )
       }
       
@@ -132,6 +157,10 @@ useEffect(()=>{
   return (
     <>
     <Header />
+    {already ? <p className={styles[`revealed-message`]}>Already Wishlisted!<div className={styles[`green-bottom`]}></div></p>:(null)}
+      {wishMsg ? <p className={styles[`revealed-message`]}>Wishlisted Successfully!<div className={styles[`green-bottom`]}></div></p>:(null)}
+      {cartMsg ? <p className={styles[`revealed-message`]}>Added to Cart Successfully!<div className={styles[`green-bottom`]}></div></p>:(null)}
+
     {productDetails ? (
         <div className={styles[`product-details-container`]}>
             <div className={styles[`product-display`]}>

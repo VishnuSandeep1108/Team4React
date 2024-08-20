@@ -20,6 +20,10 @@ function Wishlist() {
     const [category,setCategory]=useState('anything')
     const [n,setsorted]=useState()
     const [searche,hhh]=useState('')
+    const [deleteMsg, setDeleteMsg] = useState(false);
+    const [cartMsg, setCartMsg] = useState(false);
+
+
     useEffect(
         ()=>{
             axios.get(`http://localhost:8000/users?username=${username}`).then((user)=>{
@@ -49,16 +53,28 @@ function Wishlist() {
             data[0].cart.push(j)
         }
         setData([...data])
-        axios.put(`http://localhost:8000/users/${userid}`,data[0]).then(()=>{console.log('added to cart')})
-        alert('Added to Cart')
+        axios.put(`http://localhost:8000/users/${userid}`,data[0]).then(()=>{console.log('added to cart');
+            setCartMsg(true);
+          setDeleteMsg(false);
+            setTimeout(()=>{
+              setCartMsg(false);
+            },3000);
+        })
+        // alert('Added to Cart')
     }
 
     const wishlistdelete=(j)=>{
         const f=data[0].wishlist
         data[0].wishlist.splice(f.indexOf(j),1)
         setData([...data])
-        axios.put(`http://localhost:8000/users/${userid}`,data[0]).then(()=>{console.log('removed from wishlist')})
-        alert('deleted from wishlist')
+        axios.put(`http://localhost:8000/users/${userid}`,data[0]).then(()=>{console.log('removed from wishlist');
+            setCartMsg(false);
+            setDeleteMsg(true);
+              setTimeout(()=>{
+                setDeleteMsg(false);
+              },3000);
+        })
+        // alert('deleted from wishlist')
     }
     const categoryy=(val)=>{
         setCategory(val)
@@ -87,6 +103,9 @@ function Wishlist() {
 //     </div>
 <>
 <Header />
+{deleteMsg ? <p className={styles[`revealed-message`]}>Deleted from Wishlist!<div className={styles[`green-bottom`]}></div></p>:(null)}
+{cartMsg ? <p className={styles[`revealed-message`]}>Added to Cart Successfully!<div className={styles[`green-bottom`]}></div></p>:(null)}
+
 <h1 className={styles[`heading`]}>WISHLIST</h1>
 <a className={styles[`top-sellers-categories`]} onClick={()=>categoryy('mens-shirts')}><span className={styles[`top-border`]}></span>
               <span>Mens clothing</span>

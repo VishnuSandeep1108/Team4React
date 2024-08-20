@@ -91,7 +91,7 @@ const [isFootewearHoverd ,setIsFootwearHovered] =useState(false);
              onMouseLeave={() => setIsMenHovered(false)}>
               
               <Link className={`nav-link ${styles[`nav-link`]}`} to="/men">
-                Men
+                MEN
               </Link>
               {isMenHovered && (
                 <div className={` dropdown-menu ${styles[`dropdown-menu`]}`}>

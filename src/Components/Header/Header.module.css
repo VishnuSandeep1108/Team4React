@@ -39,15 +39,15 @@ body {
 
 .navbar-nav {
     list-style-type: none;
-    padding: 0;
     margin: 0;
     display: flex;
     align-items: center;
+    padding-right: 10px;
 }
 
 .nav-item {
     position: relative;
-    margin-right: 100px;
+    margin-right: 85px;
 }
 
 .nav-link {
@@ -56,16 +56,16 @@ body {
     padding: 10px 15px;
     display: block;
     font-family: "Cinzel Decorative", serif; */
-    font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Cinzel", serif;
+    font-weight: 900;
     font-style: normal;
     margin-right: -2vw;
     border-bottom: 5px solid transparent;
     transition: border-bottom 0.5s ease-in;
     color: black;
     padding:10px 15px;
-    font-size: 1.8em;
-    font-weight: bold;
+    font-size: 1.9em;
+    /* font-weight: bold; */
 }
 
 .nav-link:active{

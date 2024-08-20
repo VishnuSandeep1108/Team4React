@@ -55,6 +55,7 @@ function Womens() {
 
     const onAddCart = (product) =>
         {
+          window.scrollTo(0, 0);
          console.log(username);
          let flag=false;
          
@@ -98,6 +99,7 @@ function Womens() {
 
     const onAddWishlist = (product) =>
    {
+    window.scrollTo(0, 0);
     console.log(username);
     let flag=false;
     

@@ -56,6 +56,7 @@ function Kids() {
 
     const onAddCart = (product) =>
         {
+          window.scrollTo(0, 0);
          console.log(username);
          let flag=false;
          
@@ -99,6 +100,7 @@ function Kids() {
 
     const onAddWishlist = (product) =>
    {
+    window.scrollTo(0, 0);
     console.log(username);
     let flag=false;
     

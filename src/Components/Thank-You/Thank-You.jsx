@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Thank-You.module.css";
 
 function ThankYou() {
     const navigate = useNavigate();
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[])
+    
     return (
         <div className={`container ${styles[`container`]}`}>
             <div className={`wrapper ${styles[`wrapper`]}`}>

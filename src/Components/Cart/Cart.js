@@ -59,7 +59,7 @@ function Cart() {
             currentUser.cart.forEach((cartItem)=>{
                 total+=(cartItem.itemCount * cartItem.price);
             })
-            setTotalAmount(total);
+            setTotalAmount(total.toFixed(2));
             setTotalPrice(total);
             
         }

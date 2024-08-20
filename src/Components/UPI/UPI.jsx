@@ -126,10 +126,10 @@ function UPI() {
                                                                 "UPI ID is invalid!",
                                                         },
                                                     })}
-                                                    className={`form-control`}
+                                                    className={`form-control ${styles[`form-control`]}`}
                                                     placeholder="johnsmith@bank"
                                                 />
-                                                <label>UPI ID</label>
+                                                <label className={styles[`label`]}>UPI ID</label>
                                                 <div
                                                     className={`text-danger ${
                                                         styles[`text-danger`]

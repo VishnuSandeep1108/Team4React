@@ -164,10 +164,10 @@ function Card() {
                                                     value={name}
                                                     onChange={nameHandler}
                                                     id="name"
-                                                    className={`form-control`}
+                                                    className={`form-control ${styles[`form-control`]}`}
                                                     placeholder="John Smith"
                                                 />
-                                                <label>Name</label>
+                                                <label className={styles[`label`]}>Name</label>
                                                 <div
                                                     className={`text-danger ${
                                                         styles[`text-danger`]
@@ -209,10 +209,10 @@ function Card() {
                                                     })}
                                                     value={cardNumber}
                                                     onChange={cardNumberHandler}
-                                                    className={`form-control`}
+                                                    className={`form-control ${styles[`form-control`]}`}
                                                     placeholder="0000 0000 0000 0000"
                                                 />
-                                                <label>Card Number</label>
+                                                <label className={styles[`label`]}>Card Number</label>
                                                 <div
                                                     className={`text-danger ${
                                                         styles[`text-danger`]
@@ -268,10 +268,10 @@ function Card() {
                                                             onChange={
                                                                 expiryDateHandler
                                                             }
-                                                            className={`form-control`}
+                                                            className={`form-control ${styles[`form-control`]}`}
                                                             placeholder="MM/YY"
                                                         />
-                                                        <label>
+                                                        <label className={styles[`label`]}>
                                                             Expiry Date
                                                         </label>
                                                         <div
@@ -331,10 +331,10 @@ function Card() {
                                                             onChange={
                                                                 cvvHandler
                                                             }
-                                                            className={`form-control`}
+                                                            className={`form-control ${styles[`form-control`]}`}
                                                             placeholder="&#9679;&#9679;&#9679;"
                                                         />
-                                                        <label>CVV</label>
+                                                        <label className={styles[`label`]}>CVV</label>
                                                         <div
                                                             className={`text-danger ${
                                                                 styles[

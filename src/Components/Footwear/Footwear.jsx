@@ -60,6 +60,8 @@ function Footwear() {
          
          if(username)
            {
+            window.scrollTo(0, 0);
+
              console.log("VALID");
              
              axios.get(`http://localhost:8000/users?username=${username}`).then((user)=>{
@@ -105,6 +107,7 @@ function Footwear() {
     
     if(username)
       {
+        window.scrollTo(0, 0);
         console.log("VALID");
         
         axios.get(`http://localhost:8000/users?username=${username}`).then((user)=>{
