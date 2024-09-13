@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import styles from "./Mens.module.css";
-import axios from 'axios';
+import axios from 'axios'
 
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import {CategoryContext} from "../../App";
